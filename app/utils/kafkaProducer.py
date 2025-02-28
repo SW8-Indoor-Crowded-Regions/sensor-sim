@@ -1,29 +1,44 @@
 from kafka import KafkaProducer
 import json
 import time
+import os
 import random
+from sensorDataSim import initSensors, intervalMovement
 
 # Kafka setup
 KAFKA_TOPIC = "sensor-data"
-KAFKA_BROKER = "kafka:9092"
+KAFKA_BROKER = "localhost:9092"
 
 producer = KafkaProducer(bootstrap_servers=KAFKA_BROKER,
-                         value_serializer=lambda v: json.dumps(v).encode('utf-8'))
+						 value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 
+	
 # Simulating multiple sensors
-SENSOR_IDS = ["room_101", "room_102", "room_103"]
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sensors_file_path = os.path.join(current_dir, "sensors", "sensors.json")
 
-def generate_sensor_data(sensor_id):
-    """Simulates sensor data with realistic crowd movement patterns."""
-    return {
-        "sensor_id": sensor_id,
-        "timestamp": time.time(),
-        "people_count": max(0, int(random.gauss(10, 3)))  # Gaussian distribution around 10 people
-    }
+sensors, rooms = initSensors()
+timeStamp = 0
 
-while True:
-    for sensor_id in SENSOR_IDS:
-        sensor_data = generate_sensor_data(sensor_id)
-        producer.send(KAFKA_TOPIC, value=sensor_data)
-        print(f"Sent: {sensor_data}")
-    time.sleep(1)  # Simulate 1-second interval
+try:
+	while True:
+		sensors = intervalMovement(sensors, timeStamp)
+		timeStamp+=1
+		for room in rooms.values():
+			producer.send(KAFKA_TOPIC, value=room.getOccupancy())
+			print(f"Sent: {room.getOccupancy()}")
+  
+		"""for sensor_id in sensors:
+			sensor_data = random.choices(
+				range(5),
+				weights=[0.8, 0.1, 0.05, 0.035, 0.015]
+			)[0]
+			producer.send(KAFKA_TOPIC, value=sensor_data)
+			print(f"Sent: {sensor_data}")"""
+		time.sleep(1)
+except KeyboardInterrupt as e:
+	print("\nProducer closing...")
+finally:
+	producer.flush()
+	producer.close()
+	print("Producer closed.")
