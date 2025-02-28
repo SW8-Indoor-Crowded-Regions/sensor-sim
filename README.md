@@ -53,11 +53,11 @@ nix develop
 
 ## 📜 Dependencies
 
-TBD
+- **kafka-python** - Python client for Apache Kafka distributed stream processing system.
 
 ---
 
-## 🚀 Running the Application
+## 🚀 Running the Application 
 TBD
 ---
 
