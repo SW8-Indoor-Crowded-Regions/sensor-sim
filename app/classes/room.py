@@ -14,4 +14,6 @@ class Room ():
 		self.occupancy += 1
 	
 	def decrement_occupancy(self):
+		if self.occupancy < 0:
+			raise Exception("Room occupancy cannot be less than zero. The room is empty.")
 		self.occupancy -= 1
