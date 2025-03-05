@@ -46,3 +46,6 @@ def test_move(visitor):
   assert visitor.get_current_room().id == 1
   visitor.move(visitor.get_movement_options()[1])
   assert visitor.get_current_room().id == 3
+  
+def test_str(visitor):
+  assert str(visitor) == "Visitor (id=1, visitedRooms=[1, 2])"
