@@ -1,12 +1,14 @@
-from app.classes.room import Room
-from app.classes.sensor import Sensor
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from app.classes.room import Room
+    from app.classes.sensor import Sensor
 
 class Visitor():
 	def __init__(self, id: int, rooms: list["Room"]):
 		self.id = id
 		self.visited_rooms = rooms
 
-	def get_current_room(self) -> Room:
+	def get_current_room(self) -> "Room":
 		"""Returns the room that the visitor is currently in.
 
 		Returns:
@@ -14,7 +16,7 @@ class Visitor():
 		"""
 		return self.visited_rooms[-1]
 		
-	def get_movement_options(self) -> list[Sensor]:
+	def get_movement_options(self) -> list["Sensor"]:
 		"""Returns the sensors that the visitor can move to.
 
 		Returns:
@@ -23,7 +25,7 @@ class Visitor():
 		# Return all sensors in room sensors for each room self.visited_rooms
 		return [sensor for sensor in self.get_current_room().sensors]
 	
-	def move(self, sensor: Sensor):
+	def move(self, sensor: "Sensor"):
 		"""Moves the visitor to the room connected to the sensor.
 
 		Args:

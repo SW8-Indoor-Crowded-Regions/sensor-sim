@@ -3,8 +3,12 @@ import os
 from kafka import KafkaProducer
 import json
 
+from typing import TYPE_CHECKING
+if TYPE_CHECKING:
+    from app.classes.room import Room
+
 class Sensor ():
-	def __init__(self, id: int, rooms: list['Room']):
+	def __init__(self, id: int, rooms: list["Room"]):
 		self.id = id
 		self.rooms = rooms
 		self.movements = [0, 0]
@@ -16,7 +20,7 @@ class Sensor ():
 						 value_serializer=lambda v: json.dumps(v).encode('utf-8'))
 		producer.send("sensor-data", value=self.movements)
 
-	def pass_sensor(self, from_room: int) -> Room:
+	def pass_sensor(self, from_room: int) -> "Room":
 		"""Checks if the from_room ID matches the first or second room in the rooms tuple."""
 		if from_room == self.rooms[0].id:
 			direction = 1
