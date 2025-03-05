@@ -29,16 +29,3 @@ class Sensor ():
 	
 	def __str__(self) -> str:
 		return f"Sensor(id={self.id}, rooms={[room.id for room in self.rooms]}, movements={self.movements})"
-		
-		
-	"""
-if __name__ == "__main__":
-	from room import Room
-	sensor = Sensor(1, [
-  	Room({"id": 1, "name": "101", "type": "lounge"}, 1.5, 101.2, []), 
-		Room({"id": 2, "name": "102", "type": "exhibition"}, 1.2, 111.2, [])])
-	sensor.pass_sensor(1)
-	sensor.pass_sensor(2)
-	sensor.send_data()
- 
- """
