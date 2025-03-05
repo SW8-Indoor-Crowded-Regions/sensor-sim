@@ -12,7 +12,7 @@ def sensor():
 
 def test_pass_sensor(sensor):
 	sensor.pass_sensor(1)
-	assert sensor.movements == [1, 0]
+	assert sensor.movements == [0, 1]
 	sensor.pass_sensor(2)
 	assert sensor.movements == [1, 1]
 
@@ -55,7 +55,7 @@ def test_pass_sensor_multiple_times(sensor):
     sensor.pass_sensor(1)
     sensor.pass_sensor(1)
     sensor.pass_sensor(2)
-    assert sensor.movements == [2, 1]
+    assert sensor.movements == [1, 2]
 
 def test_str(sensor):
 	expected_str = "Sensor(id=1, rooms=[1, 2], movements=[0, 0])"
