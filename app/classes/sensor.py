@@ -12,13 +12,6 @@ class Sensor ():
 		self.id = id
 		self.rooms = rooms
 		self.movements = [0, 0]
-	
-	def send_data(self):
-		"""Sends data to the Kafka broker."""
-		load_dotenv()
-		producer = KafkaProducer(bootstrap_servers=os.getenv("KAFKA_BROKER"),
-						 value_serializer=lambda v: json.dumps(v).encode('utf-8'))
-		producer.send("sensor-data", value=self.movements)
 
 	def pass_sensor(self, from_room: int) -> "Room":
 		"""Checks if the from_room ID matches the first or second room in the rooms tuple."""
