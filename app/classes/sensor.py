@@ -1,8 +1,3 @@
-from dotenv import load_dotenv
-import os
-from kafka import KafkaProducer
-import json
-
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from app.classes.room import Room
