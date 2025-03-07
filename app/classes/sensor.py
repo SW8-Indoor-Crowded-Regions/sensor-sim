@@ -20,4 +20,4 @@ class Sensor ():
 		return self.rooms[direction]
 	
 	def __str__(self) -> str:
-		return f"Sensor(id={self.id}, rooms={[room.id for room in self.rooms]}, movements={self.movements})"
+		return f"Sensor(id={self.id}, rooms={['Room id: ' + room.id.__str__() for room in self.rooms]}, movements={self.movements})"
