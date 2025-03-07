@@ -39,13 +39,30 @@ def test_get_movement_options(visitor):
   assert visitor.get_movement_options()[1].rooms[0].id == 2
   assert visitor.get_movement_options()[1].rooms[1].id == 3
 	
-def test_move(visitor):
+
+def test_move(monkeypatch, visitor):
   assert visitor.get_current_room().id == 2
-  visitor.move(visitor.get_movement_options()[0])
-  print(visitor.visited_rooms)
+  
+  def mock_choose_next_move(res):
+    return lambda visitor: visitor.get_movement_options()[res]
+  
+  monkeypatch.setattr("app.classes.visitor.choose_next_move", mock_choose_next_move(0))
+  visitor.move()
   assert visitor.get_current_room().id == 1
-  visitor.move(visitor.get_movement_options()[1])
+  monkeypatch.setattr("app.classes.visitor.choose_next_move", mock_choose_next_move(1))
+  visitor.move()
   assert visitor.get_current_room().id == 3
+
+def test_move_no_sensor(monkeypatch, visitor):
+  visitor.visited_rooms = [Room({"id": 1, "name": "101", "type": "lounge"}, 1.5, 101.2, [])]
+  
+  def mock_choose_next_move(visitor):
+    return None
+
+  monkeypatch.setattr("app.classes.visitor.choose_next_move", mock_choose_next_move)
+  
+  visitor.move()
+  assert visitor.get_current_room().id == 1
   
 def test_str(visitor):
   assert str(visitor) == "Visitor (id=1, visitedRooms=[1, 2])"

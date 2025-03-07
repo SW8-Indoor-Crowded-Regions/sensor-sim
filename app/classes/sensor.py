@@ -1,6 +1,8 @@
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
     from app.classes.room import Room
+    
+from app.utils.kafka_producer import send_data
 
 class Sensor ():
 	def __init__(self, id: int, rooms: list["Room"]):
@@ -18,6 +20,11 @@ class Sensor ():
 			raise Exception("No room found with id:", from_room)
 		self.movements[direction] += 1
 		return self.rooms[direction]
+
+	def send_data(self):
+		"""Sends the sensor data to the Kafka producer"""
+		send_data(self.movements)
+		self.movements = [0, 0]
 	
 	def __str__(self) -> str:
 		return f"Sensor(id={self.id}, rooms={['Room id: ' + room.id.__str__() for room in self.rooms]}, movements={self.movements})"

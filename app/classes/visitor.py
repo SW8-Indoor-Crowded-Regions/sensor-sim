@@ -28,8 +28,10 @@ class Visitor():
 	
 	def move(self):
 		"""Moves the visitor to the room connected to the sensor."""
-  
+
 		sensor = choose_next_move(self)
+		if sensor is None:
+			return
 		room = sensor.pass_sensor(self.get_current_room().id)
 		self.visited_rooms.append(room)
 
