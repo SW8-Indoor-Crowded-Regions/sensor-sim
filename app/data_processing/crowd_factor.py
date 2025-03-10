@@ -30,15 +30,6 @@ def calculate_crowd_factor(sensor_data: dict[str, dict[str, int]]):
 	room1.remove_occupants(sensor_data["room2"]["movements"])
 	room2.add_occupants(sensor_data["room2"]["movements"])
 	room2.remove_occupants(sensor_data["room1"]["movements"])
-	
-	room1_density = room1.occupancy / room1.area
-	room1_crowdedness = room1_density * room1.crowd_factor
- 
-	room2_density = room2.occupancy / room2.area
-	room2_crowdedness = room2_density * room2.crowd_factor
- 
-	print(f"Room {room1.name} has a crowdedness of {room1_crowdedness}")
-	print(f"Room {room2.name} has a crowdedness of {room2_crowdedness}\n\n")
  
 	
 
