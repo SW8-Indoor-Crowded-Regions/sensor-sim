@@ -11,9 +11,6 @@ def choose_next_move(visitor: "Visitor") -> "Sensor | None":
 	Returns:
 			Sensor: The sensor that the visitor will move through.
 	"""
-
-	current_room = visitor.get_current_room()
-
 	movement_options = visitor.get_movement_options()
 
 	if not movement_options:

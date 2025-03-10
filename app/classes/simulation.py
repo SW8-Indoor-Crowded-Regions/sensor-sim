@@ -1,5 +1,4 @@
 from app.classes.visitor import Visitor
-from app.utils.kafka_producer import send_data
 from app.utils.heuristics import should_create_visitor
 import time
 

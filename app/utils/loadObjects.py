@@ -1,6 +1,5 @@
 from app.classes.room import Room
 from app.classes.sensor import Sensor
-import json
 from db import Room as RoomModel, Sensor as SensorModel
 
 def load_rooms() -> list[Room]:

@@ -1,7 +1,6 @@
 import sys
 import os
 from db import Database
-import time
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 

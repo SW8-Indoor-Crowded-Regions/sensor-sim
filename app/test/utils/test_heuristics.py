@@ -107,10 +107,10 @@ def test_should_create_visitor_fixed(mocker):
     mocker.patch('random.random', return_value=0.1)
     
     # Expect the function to return True
-    assert should_create_visitor() == True
+    assert should_create_visitor()
     
     # Mock the random function to always return 0.9
     mocker.patch('random.random', return_value=0.9)
     
     # Expect the function to return False
-    assert should_create_visitor() == False
+    assert not should_create_visitor()
