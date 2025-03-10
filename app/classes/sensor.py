@@ -23,7 +23,17 @@ class Sensor ():
 
 	def send_data(self):
 		"""Sends the sensor data to the Kafka producer"""
-		send_data(self.movements)
+		send_data({
+			"sensor_id": self.id.__str__(),
+			"room1": {
+				"room_id": self.rooms[0].id.__str__(),
+				"movements": self.movements[0]
+			},
+			"room2": {
+				"room_id": self.rooms[1].id.__str__(),
+				"movements": self.movements[1]
+			}
+		})
 		self.movements = [0, 0]
 	
 	def __str__(self) -> str:
