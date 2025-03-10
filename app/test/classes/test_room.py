@@ -37,3 +37,7 @@ def test_decrement_occupancy_below_zero(room):
 	with pytest.raises(Exception, match="Room occupancy cannot be less than zero. The room is empty."):
 		room.decrement_occupancy()
 		room.decrement_occupancy()
+  
+def test_str(room):
+	expected_str = "Room (id=1, name=Conference Room, type=Meeting, occupancy=0, crowdFactor=1.5, area=50.0, sensors=['Sensor id: 1', 'Sensor id: 2'])"
+	assert str(room) == expected_str

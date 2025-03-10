@@ -11,12 +11,14 @@ coverage==7.6.12
 cycler==0.12.1
 decorator==5.2.1
 defusedxml==0.7.1
+dnspython==2.7.0
 docopt==0.6.2
 dotenv==0.9.9
 executing==2.2.0
 fastjsonschema==2.21.1
 fonttools==4.56.0
 idna==3.10
+indoor_crowded_region_detection_database @ git+https://github.com/SW8-Indoor-Crowded-Regions/database.git@8ac959b683bb724facadda7afb5871cf2ef84a1c
 iniconfig==2.0.0
 ipython==8.12.3
 jedi==0.19.2
@@ -31,6 +33,7 @@ kiwisolver==1.4.8
 MarkupSafe==3.0.2
 matplotlib-inline==0.1.7
 mistune==3.1.2
+mongoengine==0.29.1
 nbclient==0.10.2
 nbconvert==7.16.6
 nbformat==5.10.4
@@ -47,9 +50,11 @@ prompt_toolkit==3.0.50
 ptyprocess==0.7.0
 pure_eval==0.2.3
 Pygments==2.19.1
+pymongo==4.11.2
 pyparsing==3.2.1
 pytest==8.3.5
 pytest-cov==6.0.0
+pytest-mock==3.14.0
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
 pyzmq==26.2.1
