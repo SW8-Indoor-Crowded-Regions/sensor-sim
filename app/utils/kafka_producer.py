@@ -3,7 +3,7 @@ from dotenv import load_dotenv
 import os
 import json
 
-def send_data(data: dict):
+def send_data(data: dict) -> None:
 	"""Sends data to the Kafka broker."""
 	load_dotenv()
 	producer = KafkaProducer(bootstrap_servers=os.getenv("KAFKA_BROKER"),
