@@ -3,7 +3,6 @@ import time
 from app.classes.visitor import Visitor
 from app.classes.room import Room
 from app.classes.simulation import Simulation
-import signal
 
 class StopSimulation(Exception):
 		"""Custom exception to stop the infinite loop in the test."""
