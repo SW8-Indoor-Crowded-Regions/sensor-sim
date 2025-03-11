@@ -23,13 +23,5 @@ class Consumer:
 				try:
 						for message in self.consumer:
 								self.process_function(message.value)
-				except KeyboardInterrupt:
+				except KeyboardInterrupt: # pragma: no cover
 						print("Consumer stopped.")
-
-		def get_next_message(self, timeout=5):
-				"""Fetch a single message with a timeout (default: 5 seconds)."""
-				msg_pack = self.consumer.poll(timeout_ms=timeout * 1000)
-				for tp, messages in msg_pack.items():
-						for message in messages:
-								return message.value  # Return the first message found
-				return None  # Return None if no message is found
