@@ -5,16 +5,18 @@ from app.classes.room import Room
 from app.classes.sensor import Sensor
 
 class Simulation():
-	def __init__(self, rooms: list[Room], sensors: list[Sensor]):
+	def __init__(self, rooms, sensors, max_iterations=None):
 			self.sensors = sensors
 			self.rooms = rooms
 			self.starting_room = rooms[0]
 			self.visitors = []
+			self.max_iterations = max_iterations
 
 	def run(self):
 		entrance_sensor = Sensor(0, [Room({"id": 0, "name": "Entrance", "type": "ENTRANCE"}, 1.0, 0, []), self.starting_room])
+		iterations = 0
 		try:
-			while True:
+			while self.max_iterations is None or iterations < self.max_iterations:
 				for visitor in self.visitors:
 					visitor.move()
 				for sensor in self.sensors:
@@ -24,6 +26,7 @@ class Simulation():
 					entrance_sensor.pass_sensor(0)
 					entrance_sensor.send_data()
 				time.sleep(5)
-		except KeyboardInterrupt:
-			print("\nSimulation stopped.")
+				iterations += 1
+		except KeyboardInterrupt: # pragma: no cover
+			print("\nSimulation stopped.") 
 			exit()
