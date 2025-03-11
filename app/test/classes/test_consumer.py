@@ -42,8 +42,8 @@ def test_init(mocker, monkeypatch):
 	assert mock_kafka.called
 	assert mock_kafka.return_value.subscribe.called_with("sensor-data")
 	
-def test_consume_messages(consumer, mocker):
-	mock_kafka = mocker.patch("app.classes.consumer.KafkaConsumer")
+def test_consume_messages(consumer, monkeypatch):
+	monkeypatch.setattr("app.classes.consumer.KafkaConsumer", consumer.consumer)
 	consumer.consume_messages()
 	
 	assert consumer.process_function.call_count == 2
