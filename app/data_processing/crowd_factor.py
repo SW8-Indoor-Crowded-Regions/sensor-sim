@@ -1,6 +1,6 @@
 from db import Database
 from app.classes.consumer import Consumer
-from app.utils.loadObjects import load_rooms
+from app.utils.load_objects import load_rooms
 
 
 def update_room_occupancy(sensor_data: dict[str, dict[str, int]]):
