@@ -1,4 +1,5 @@
 from typing import TYPE_CHECKING
+from app.utils.heuristics import choose_next_move
 if TYPE_CHECKING:
     from app.classes.room import Room
     from app.classes.sensor import Sensor
@@ -25,12 +26,12 @@ class Visitor():
 		# Return all sensors in room sensors for each room self.visited_rooms
 		return [sensor for sensor in self.get_current_room().sensors]
 	
-	def move(self, sensor: "Sensor"):
-		"""Moves the visitor to the room connected to the sensor.
+	def move(self):
+		"""Moves the visitor to the room connected to the sensor."""
 
-		Args:
-				sensor (Sensor): The sensor (/door) that the visitor will move through.
-		"""
+		sensor = choose_next_move(self)
+		if sensor is None:
+			return
 		room = sensor.pass_sensor(self.get_current_room().id)
 		self.visited_rooms.append(room)
 

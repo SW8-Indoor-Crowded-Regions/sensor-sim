@@ -23,3 +23,6 @@ class Room ():
 		if self.occupancy < 0:
 			raise Exception("Room occupancy cannot be less than zero. The room is empty.")
 		self.occupancy -= 1
+
+	def __str__(self) -> str:
+		return f"Room (id={self.id}, name={self.name}, type={self.type}, occupancy={self.occupancy}, crowdFactor={self.crowd_factor}, area={self.area}, sensors={['Sensor id: ' + sensor.id.__str__() for sensor in self.sensors]})"
