@@ -5,14 +5,15 @@ from app.classes.room import Room
 from app.classes.sensor import Sensor
 
 class Simulation():
-	def __init__(self, rooms, sensors, max_iterations=None):
+	def __init__(self, rooms: list[Room], sensors: list[Sensor], max_iterations=None):
 			self.sensors = sensors
 			self.rooms = rooms
 			self.starting_room = rooms[0]
 			self.visitors = []
 			self.max_iterations = max_iterations
 
-	def run(self):
+	def run(self) -> None:
+		"""Runs the simulation."""
 		entrance_sensor = Sensor(0, [Room({"id": 0, "name": "Entrance", "type": "ENTRANCE"}, 1.0, 0, []), self.starting_room])
 		iterations = 0
 		try:

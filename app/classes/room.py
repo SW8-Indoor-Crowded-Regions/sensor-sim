@@ -1,7 +1,7 @@
 class Room ():
 	"""Represents a room in a building."""
 	from .sensor import Sensor
-	def __init__(self, room_info, crowd_factor: float, area: float, sensors: list[Sensor]):
+	def __init__(self, room_info: dict, crowd_factor: float, area: float, sensors: list[Sensor]):
 		self.id = room_info["id"]
 		self.name = room_info["name"]
 		self.type = room_info["type"]
@@ -10,7 +10,7 @@ class Room ():
 		self.area = area
 		self.sensors = sensors
 	
-	def add_occupants(self, occupants: int):
+	def add_occupants(self, occupants: int) -> None:
 		"""Increments the room's occupancy by the number of occupants.
 
 		Args:
@@ -18,7 +18,7 @@ class Room ():
 		"""
 		self.occupancy += occupants
 	
-	def remove_occupants(self, occupants: int):
+	def remove_occupants(self, occupants: int) -> None:
 		"""Decrements the room's occupancy by the number of occupants given.
 
 		Raises:

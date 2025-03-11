@@ -26,7 +26,7 @@ class Visitor():
 		# Return all sensors in room sensors for each room self.visited_rooms
 		return [sensor for sensor in self.get_current_room().sensors]
 	
-	def move(self):
+	def move(self) -> None:
 		"""Moves the visitor to the room connected to the sensor."""
 
 		sensor = choose_next_move(self)

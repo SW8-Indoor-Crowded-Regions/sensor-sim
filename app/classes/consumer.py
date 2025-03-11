@@ -18,7 +18,7 @@ class Consumer:
 				)
 				print(f"Connected to Kafka at {self.broker}, listening for messages on '{self.topic}'...")
 
-		def consume_messages(self):
+		def consume_messages(self) -> None:
 				"""Continuously listens for messages in the queue."""
 				try:
 						for message in self.consumer:

@@ -25,7 +25,7 @@ def update_room_occupancy(sensor_data: dict[str, dict[str, int]]):
  
 	
 
-def process_sensor_data():
+def process_sensor_data() -> None:
 	""" Processes the sensor data by consuming messages from the sensor-data topic and runs the calculate_crowd_factor function.
 	"""
 	Database()
