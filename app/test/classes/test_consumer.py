@@ -24,8 +24,9 @@ def mock_kafka_consumer(mocker):
 		return mock_consumer
 	
 @pytest.fixture
-def consumer(mock_env, mock_kafka_consumer, mocker):
+def consumer(mock_env, mock_kafka_consumer, mocker, monkeypatch):
 		"""Initialize Consumer and replace its KafkaConsumer instance with a mock."""
+		monkeypatch.setattr("app.classes.consumer.KafkaConsumer", mocker.Mock())
 		mock_process_function = mocker.Mock()
 		consumer_instance = Consumer(mock_process_function, "test-topic")
 		consumer_instance.consumer = mock_kafka_consumer  # Override with mock
