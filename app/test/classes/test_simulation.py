@@ -37,6 +37,7 @@ def test_simulation_runs(monkeypatch, simulation):
 		visitor_creation = iter([True, False, False])  
 		monkeypatch.setattr("app.classes.simulation.should_create_visitor", lambda: next(visitor_creation))
 		monkeypatch.setattr("app.classes.visitor.Visitor.move", lambda x: None)
+		monkeypatch.setattr("app.classes.sensor.Sensor.send_data", lambda x: None)
 
 		# Add a counter to stop the infinite loop
 		max_iterations = 2

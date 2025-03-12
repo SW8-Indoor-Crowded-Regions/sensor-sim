@@ -11,7 +11,12 @@ class Sensor ():
 		self.movements = [0, 0]
 
 	def pass_sensor(self, from_room: int) -> "Room":
-		"""Checks if the from_room ID matches the first or second room in the rooms tuple."""
+		"""Checks if the from_room ID matches the first or second room in the rooms tuple.
+		Args:
+			from_room (int): The ID of the room that the visitor is currently in.
+		Returns:
+			Room: The room that the visitor will move to.
+  	"""
 		if from_room == self.rooms[0].id:
 			direction = 1
 		elif from_room == self.rooms[1].id:
@@ -21,9 +26,19 @@ class Sensor ():
 		self.movements[direction] += 1
 		return self.rooms[direction]
 
-	def send_data(self):
+	def send_data(self) -> None:
 		"""Sends the sensor data to the Kafka producer"""
-		send_data(self.movements)
+		send_data({
+			"sensor_id": self.id.__str__(),
+			"room1": {
+				"room_id": self.rooms[0].id.__str__(),
+				"movements": self.movements[0]
+			},
+			"room2": {
+				"room_id": self.rooms[1].id.__str__(),
+				"movements": self.movements[1]
+			}
+		})
 		self.movements = [0, 0]
 	
 	def __str__(self) -> str:
