@@ -23,17 +23,19 @@ def test_room_initialization(room, room_info, sensors):
 	assert room.area == 50.0
 	assert room.sensors == sensors
 
-def test_increment_occupancy(room):
-	room.increment_occupancy()
+def test_add_occupants(room):
+	room.add_occupants(1)
 	assert room.occupancy == 1
 
-def test_decrement_occupancy(room):
-	room.increment_occupancy()
-	room.increment_occupancy()
-	room.decrement_occupancy()
+def test_remove_occupants(room):
+	room.add_occupants(3)
+	room.remove_occupants(2)
 	assert room.occupancy == 1
 
-def test_decrement_occupancy_below_zero(room):
+def test_remove_occupants_below_zero(room):
 	with pytest.raises(Exception, match="Room occupancy cannot be less than zero. The room is empty."):
-		room.decrement_occupancy()
-		room.decrement_occupancy()
+		room.remove_occupants(2)
+  
+def test_str(room):
+	expected_str = "Room (id=1, name=Conference Room, type=Meeting, occupancy=0, crowdFactor=1.5, area=50.0, sensors=['Sensor id: 1', 'Sensor id: 2'])"
+	assert str(room) == expected_str
