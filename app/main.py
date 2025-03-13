@@ -6,6 +6,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI
 from app.routes import rooms
+from app.routes import sensors
 from db.database import Database
 from app.utils.data_models.general import HealthCheckModel
 
@@ -21,6 +22,7 @@ app = FastAPI(
 )
 
 app.include_router(rooms.router)
+app.include_router(sensors.router)
 
 
 @app.get(
