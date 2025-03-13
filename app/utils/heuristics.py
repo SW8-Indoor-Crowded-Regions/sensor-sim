@@ -32,7 +32,7 @@ def choose_next_move(visitor: 'Visitor') -> 'Sensor | None':
 	return random.choices(movement_options, normalized_weights)[0]
 
 
-def get_weights(movement_options: list[Sensor], visitor: 'Visitor') -> list[float]:
+def get_weights(movement_options: list["Sensor"], visitor: 'Visitor') -> list[float]:
 	"""Returns the weights for each movement option.
 
 	Args:

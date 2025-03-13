@@ -7,14 +7,14 @@ if TYPE_CHECKING:
 class Room:
 	"""Represents a room in a building."""
 
-	def __init__(self, room_info: dict, crowd_factor: float, area: float, sensors: list[Sensor]):
+	def __init__(self, room_info: dict, crowd_factor: float, area: float, sensors: list["Sensor"]):
 		self.id: int = room_info['id']
 		self.name: str = room_info['name']
 		self.type: str = room_info['type']
 		self.occupancy: int = 0
 		self.crowd_factor: float = crowd_factor
 		self.area: float = area
-		self.sensors: list[Sensor] = sensors
+		self.sensors: list["Sensor"] = sensors
 
 	def add_occupants(self, occupants: int) -> None:
 		"""Increments the room's occupancy by the number of occupants.
