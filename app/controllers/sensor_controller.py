@@ -12,10 +12,10 @@ async def get_all_sensors() -> list[SensorModel]:
 
     for sensor in sensors:
       serialized_sensors.append({
-        "id": str(sensor.id),  # Convert ObjectId to string if necessary
+        "id": str(sensor.id),
         "name": sensor.name,
-        "rooms": [str(room.id) for room in sensor.rooms],  # Extract room IDs
-        "movements": sensor.movements
+        "rooms": [str(room.id) for room in sensor.rooms],
+        "movements": [sensor.movements]
       })
 
     return serialized_sensors
