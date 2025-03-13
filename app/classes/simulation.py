@@ -1,20 +1,16 @@
 from app.classes.visitor import Visitor
+from app.classes.room import Room
+from app.classes.sensor import Sensor
 from app.utils.heuristics import should_create_visitor
 import time
 
-from typing import TYPE_CHECKING
-
-if TYPE_CHECKING:
-	from app.classes.sensor import Sensor
-	from app.classes.room import Room
-
 
 class Simulation:
-	def __init__(self, rooms: list[Room], sensors: list[Sensor], max_iterations=None):
-		self.sensors: list[Sensor] = sensors
-		self.rooms: list[Room] = rooms
-		self.starting_room: Room = rooms[0]
-		self.visitors: list[Visitor] = []
+	def __init__(self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None):
+		self.sensors: list['Sensor'] = sensors
+		self.rooms: list['Room'] = rooms
+		self.starting_room: 'Room' = rooms[0]
+		self.visitors: list['Visitor'] = []
 		self.max_iterations: None | int = max_iterations
 
 	def run(self) -> None:
