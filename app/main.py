@@ -9,6 +9,14 @@ from app.routes import rooms
 from app.routes import sensors
 from db.database import Database
 from app.utils.data_models.general import HealthCheckModel
+from contextlib import asynccontextmanager
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI): # pragma: no cover
+	Database()
+	yield
+
 
 app = FastAPI(
 	title='Room Occupancy API',
@@ -18,7 +26,7 @@ app = FastAPI(
 	version='0.1.0',
 	docs_url='/docs',
 	redoc_url='/redoc',
-	on_startup=[lambda: Database()],
+	lifespan=lifespan,
 )
 
 app.include_router(rooms.router)
@@ -39,7 +47,7 @@ async def health_check():
 	Returns:
 		dict: A dictionary containing the status of the API.
 	"""
-	return {'status': 'ok'}
+	return {'status': 'ok'} # pragma: no cover
 
 
 if __name__ == '__main__':
