@@ -9,6 +9,8 @@ async def get_all_rooms() -> list[RoomModel]:
 	"""Fetch all rooms from the database."""
 	try:
 		rooms = Room.objects()  # type: ignore
+		for room in rooms:
+			room.id = str(room.id)
 		return list(rooms)
 	except Exception as e:
 		raise HTTPException(status_code=500, detail=str(e))
@@ -36,4 +38,5 @@ async def fetch_room_by_id(room_id: str) -> RoomModel:
 	room = Room.objects(id=bson.ObjectId(room_id)).first()  # type: ignore
 	if not room:
 		raise HTTPException(status_code=404, detail='Room not found.')
+	room.id = str(room.id)
 	return room
