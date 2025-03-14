@@ -3,6 +3,7 @@ from fastapi import HTTPException
 from unittest.mock import patch
 import bson
 from db.models.sensor import Sensor
+from app.utils.data_models.rooms import RoomModel as roomModel
 from app.controllers.sensor_controller import (
     get_all_sensors,
     get_sensor_by_id,
@@ -21,22 +22,45 @@ def sample_sensor() -> Sensor:
 
 @pytest.fixture
 def mock_sensors():
-    return [
-        Sensor(
-            id=bson.ObjectId(),
-            name='Sensor A',
-            rooms=[bson.ObjectId()],
-            movements=[10],
-        ),
-        Sensor(
-            id=bson.ObjectId(),
-            name='Sensor B',
-            rooms=[bson.ObjectId(), bson.ObjectId()],
-            movements=[20],
-        ),
-    ]
+  return [
+    Sensor(
+      id=bson.ObjectId(),
+      name='Sensor A',
+      rooms=[
+        roomModel(
+          id=bson.ObjectId(),
+          name='Room A',
+          type='LOBBY',
+          crowd_factor=1.0,
+          occupants= 10,
+          area=30,
+          longitude=40.0,
+          latitude=-73.0,
+        )
+      ],
+      movements=[10],
+    ),
+    Sensor(
+      id=bson.ObjectId(),
+      name='Sensor B',
+      rooms=[
+        roomModel(
+          id=bson.ObjectId(),
+          name='Room A',
+          type='LOBBY',
+          crowd_factor=1.0,
+          occupants= 10,
+          area=30,
+          longitude=40.0,
+          latitude=-73.0,
+        )
+      ],
+      movements=[20],
+    ),
+  ]
 
 @patch('db.models.sensor.Sensor.objects')
+@patch('db.models.room.Room.objects')
 @pytest.mark.asyncio
 async def test_get_all_sensors(mock_objects, mock_sensors):
     mock_objects.return_value = mock_sensors

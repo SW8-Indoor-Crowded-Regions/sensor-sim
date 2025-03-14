@@ -15,7 +15,7 @@ async def get_all_sensors() -> list[SensorModel]:
         "id": str(sensor.id),
         "name": sensor.name,
         "rooms": [str(room.id) for room in sensor.rooms],
-        "movements": [sensor.movements]
+        "movements": sensor.movements
       })
 
     return serialized_sensors
