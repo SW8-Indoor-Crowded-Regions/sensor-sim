@@ -1,20 +1,27 @@
 from app.classes.visitor import Visitor
-from app.utils.heuristics import should_create_visitor
-import time
 from app.classes.room import Room
 from app.classes.sensor import Sensor
+from app.utils.heuristics import should_create_visitor
+import time
 
-class Simulation():
-	def __init__(self, rooms: list[Room], sensors: list[Sensor], max_iterations=None):
-			self.sensors = sensors
-			self.rooms = rooms
-			self.starting_room = rooms[0]
-			self.visitors = []
-			self.max_iterations = max_iterations
+
+class Simulation:
+	def __init__(self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None):
+		self.sensors: list['Sensor'] = sensors
+		self.rooms: list['Room'] = rooms
+		self.starting_room: 'Room' = rooms[0]
+		self.visitors: list['Visitor'] = []
+		self.max_iterations: None | int = max_iterations
 
 	def run(self) -> None:
 		"""Runs the simulation."""
-		entrance_sensor = Sensor(0, [Room({"id": 0, "name": "Entrance", "type": "ENTRANCE"}, 1.0, 0, []), self.starting_room])
+		entrance_sensor = Sensor(
+			0,
+			[
+				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 0, []),
+				self.starting_room,
+			],
+		)
 		iterations = 0
 		try:
 			while self.max_iterations is None or iterations < self.max_iterations:
@@ -28,6 +35,6 @@ class Simulation():
 					entrance_sensor.send_data()
 				time.sleep(5)
 				iterations += 1
-		except KeyboardInterrupt: # pragma: no cover
-			print("\nSimulation stopped.") 
+		except KeyboardInterrupt:  # pragma: no cover
+			print('\nSimulation stopped.')
 			exit()
