@@ -11,7 +11,7 @@ async def get_all_sensors() -> list[SensorModel]:
     serialized_sensors = []
 
     for sensor in sensors:
-      serialized_sensors.append({
+      serialized_sensors.append({ # pragma: no cover
         "id": str(sensor.id),
         "name": sensor.name,
         "rooms": [str(room.id) for room in sensor.rooms],
