@@ -15,6 +15,7 @@ def sample_room():
         "name": "Test Room",
         "type": "MEETING",
         "crowd_factor": 0.8,
+        "occupants": 10, # DELETE AFTERWARDS
         "area": 25.5,
         "longitude": 40.7128,
         "latitude": -74.0060,
