@@ -3,7 +3,6 @@ from fastapi import HTTPException
 from unittest.mock import patch
 import bson
 from db.models.sensor import Sensor
-from app.utils.data_models.rooms import RoomModel as roomModel
 from app.utils.data_models.sensors import SensorModel
 from app.controllers.sensor_controller import (
 	get_all_sensors,
