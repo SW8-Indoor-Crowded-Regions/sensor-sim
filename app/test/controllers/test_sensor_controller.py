@@ -18,7 +18,6 @@ def sample_sensor() -> Sensor:
 		id=bson.ObjectId(),
 		name='Sensor A',
 		rooms=[bson.ObjectId(), bson.ObjectId()],
-		movements=[5],
 	)
 
 
@@ -26,20 +25,19 @@ def sample_sensor() -> Sensor:
 def mock_sensors():
 	return [
 		SensorModel(
-			id=str(bson.ObjectId()),
+			id=bson.ObjectId(),
 			rooms=[
-				str(bson.ObjectId()),
-				str(bson.ObjectId()),
+				bson.ObjectId(),
+				bson.ObjectId(),
 			],
-			movements=[10],
+
 		),
 		SensorModel(
-			id=str(bson.ObjectId()),
+			id=bson.ObjectId(),
 			rooms=[
-				str(bson.ObjectId()),
-				str(bson.ObjectId()),
+				bson.ObjectId(),
+				bson.ObjectId(),
 			],
-			movements=[20],
 		),
 	]
 
@@ -87,7 +85,7 @@ def test_validate_sensor_id(sensor_id, is_valid):
 @pytest.mark.asyncio
 async def test_fetch_sensor_by_id_found(mock_objects):
 	sensor = sample_sensor()
-	mock_objects.return_value.first.return_value = sensor
+	mock_objects.return_value.no_dereference.return_value.first.return_value = sensor
 	result = await fetch_sensor_by_id(str(sensor.id))  # type: ignore
 	assert result == sensor
 
@@ -95,7 +93,7 @@ async def test_fetch_sensor_by_id_found(mock_objects):
 @patch('db.models.sensor.Sensor.objects')
 @pytest.mark.asyncio
 async def test_fetch_sensor_by_id_not_found(mock_objects):
-	mock_objects.return_value.first.return_value = None
+	mock_objects.return_value.no_dereference.return_value.first.return_value = None
 	with pytest.raises(HTTPException) as exc:
 		await fetch_sensor_by_id(str(bson.ObjectId()))
 	assert exc.value.status_code == 404
