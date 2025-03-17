@@ -25,7 +25,7 @@ h11==0.14.0
 httpcore==1.0.7
 httpx==0.28.1
 idna==3.10
-indoor_crowded_region_detection_database @ git+https://github.com/SW8-Indoor-Crowded-Regions/database.git@8ac959b683bb724facadda7afb5871cf2ef84a1c
+indoor_crowded_region_detection_database @ git+https://github.com/SW8-Indoor-Crowded-Regions/database@b4de2cefc1805a7ffd4b950a7d82219f1e739aad
 iniconfig==2.0.0
 ipython==8.12.3
 jedi==0.19.2
