@@ -1,7 +1,6 @@
 import pytest
 import json
 from app.classes.consumer import Consumer
-from app.classes.room import Room
 
 
 @pytest.fixture

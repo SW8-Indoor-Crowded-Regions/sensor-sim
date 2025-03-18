@@ -3,7 +3,6 @@ import json
 from dotenv import load_dotenv
 import os
 from typing import Callable
-from app.utils.save_data import save_data
 from typing import TYPE_CHECKING
 if TYPE_CHECKING:
 	from app.classes.room import Room
