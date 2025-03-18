@@ -1,9 +1,4 @@
-import sys
-import os
 from db import Database
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from app.utils.load_objects import load_rooms, load_sensors
 from app.classes.simulation import Simulation
 
