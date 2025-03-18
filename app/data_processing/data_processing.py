@@ -82,5 +82,5 @@ def update_room_occupancy(sensor_data: SensorDataType, rooms: list['Room']) -> t
 def process_sensor_data(rooms: list['Room']) -> None:
 	"""Processes the sensor data by consuming messages from the sensor-data topic and runs the calculate_crowd_factor function."""
 	Database()
-	consumer = Consumer(update_room_occupancy, 'sensor-data', rooms)
+	consumer = Consumer(update_room_occupancy, 'sensor-data')
 	consumer.consume_messages()

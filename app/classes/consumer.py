@@ -10,7 +10,7 @@ if TYPE_CHECKING:
 
 
 class Consumer:
-	def __init__(self, process_function: Callable[..., tuple[str, list["Room"]]], topic: str, rooms: list["Room"]) -> None:
+	def __init__(self, process_function: Callable[..., tuple[str, list["Room"]]], topic: str) -> None:
 		load_dotenv()
 		self.topic = topic
 		self.broker = os.getenv('KAFKA_BROKER')
@@ -21,18 +21,12 @@ class Consumer:
 			enable_auto_commit=True,
 			value_deserializer=lambda v: json.loads(v.decode('utf-8')),
 		)
-		self.rooms = rooms
 		print(f"Connected to Kafka at {self.broker}, listening for messages on '{self.topic}'...")
 
 	def consume_messages(self) -> None:
 		"""Continuously listens for messages in the queue."""
-		sensor_updates: list[str] = []
 		try:
 			for message in self.consumer:
-				sensor_id, rooms = self.process_function(message.value, self.rooms)
-				sensor_updates.append(sensor_id)
-				if len(sensor_updates) >= 100:
-					save_data(self.rooms)
-					sensor_updates.clear()
+				self.process_function(message.value)
 		except KeyboardInterrupt:  # pragma: no cover
 			print('Consumer stopped.')
