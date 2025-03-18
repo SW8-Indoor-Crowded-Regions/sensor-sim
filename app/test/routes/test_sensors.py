@@ -12,19 +12,18 @@ def sample_sensor():
     return {
         "id": str(bson.ObjectId()),
         "rooms": [str(bson.ObjectId())],
-        "movements": [10],
     }
 
 @pytest.mark.asyncio
 @patch("app.routes.sensors.get_all_sensors", new_callable=AsyncMock)
 async def test_fetch_sensors(mock_get_all_sensors, sample_sensor):
-    """Test GET /sensors"""
-    mock_get_all_sensors.return_value = [sample_sensor, sample_sensor]
+	"""Test GET /sensors"""
+	mock_get_all_sensors.return_value = [sample_sensor, sample_sensor]
 
-    response = client.get("/sensors/")
+	response = client.get("/sensors/")
 
-    assert response.status_code == 200
-    assert response.json() == {"sensors": [sample_sensor, sample_sensor]}
+	assert response.status_code == 200
+	assert response.json() == {"sensors": [sample_sensor, sample_sensor]}
 
 @patch("app.routes.sensors.get_all_sensors")
 def test_fetch_sensors_empty(mock_get_all_sensors):
