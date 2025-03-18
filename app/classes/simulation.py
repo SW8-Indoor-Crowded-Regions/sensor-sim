@@ -1,7 +1,6 @@
 from app.classes.visitor import Visitor
 from app.classes.room import Room
 from app.classes.sensor import Sensor
-from app.utils.save_data import save_data
 from app.utils.heuristics import should_create_visitor
 import time
 
@@ -36,8 +35,6 @@ class Simulation:
 					entrance_sensor.pass_sensor(0)
 					entrance_sensor.send_data()
 				time.sleep(5)
-				if iterations % self.update_interval == 0:
-					save_data(self.rooms)
 				iterations += 1
 		except KeyboardInterrupt:  # pragma: no cover
 			print('\nSimulation stopped.')
