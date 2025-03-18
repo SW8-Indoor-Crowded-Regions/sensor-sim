@@ -175,7 +175,7 @@ def test_process_sensor_data(monkeypatch, mocker, rooms):
 	mock_consumer = mocker.patch('app.data_processing.data_processing.Consumer')
 	process_sensor_data(rooms)
 
-	mock_consumer.assert_called_once_with(update_room_occupancy, 'sensor-data')
+	mock_consumer.assert_called_once_with(update_room_occupancy, 'sensor-data', rooms)
 
 def test_100_runs(rooms, monkeypatch):
 	from app.data_processing.data_processing import update_room_occupancy, SensorDataType

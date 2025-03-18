@@ -32,7 +32,7 @@ def consumer(mock_env, mock_kafka_consumer, mocker, monkeypatch):
 	monkeypatch.setattr('app.classes.consumer.KafkaConsumer', mocker.Mock())
 	mock_process_function = mocker.Mock(return_value=("mock_sensor_id", []))  # Fix: Returns tuple
 
-	consumer_instance = Consumer(mock_process_function, 'test-topic')
+	consumer_instance = Consumer(mock_process_function, 'test-topic', [])
 	consumer_instance.consumer = mock_kafka_consumer  # Override with mock
 	return consumer_instance
 
@@ -42,7 +42,7 @@ def test_init(mocker, monkeypatch):
 	monkeypatch.setattr('app.classes.consumer.KafkaConsumer', mock_kafka)
 	mock_process_function = mocker.Mock()
 
-	consumer = Consumer(mock_process_function, 'sensor-data')
+	consumer = Consumer(mock_process_function, 'sensor-data', [])
 	assert consumer.topic == 'sensor-data'
 	assert consumer.process_function == mock_process_function
 	assert mock_kafka.called

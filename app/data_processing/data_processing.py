@@ -16,7 +16,6 @@ class SensorDataType(TypedDict):
     room2: SensorRoomData
 
 num_of_data = 0
-rooms = []
 
 def find_room_by_id(room_id: str, rooms: list['Room']) -> 'Room':
 	"""Find a room by its ID."""
@@ -55,12 +54,12 @@ def process_room_to_room_data(sensor_data: SensorDataType, rooms: list['Room']) 
 	
 	return rooms
 
-def update_room_occupancy(sensor_data: SensorDataType) -> tuple[str, list['Room']]:
+def update_room_occupancy(sensor_data: SensorDataType, rooms: list['Room']) -> tuple[str, list['Room']]:
 	"""Updates the room occupancy based on the sensor data.
 	Args:
 		sensor_data (dict): The sensor data.
 	"""
-	global num_of_data, rooms
+	global num_of_data
 	if sensor_data['room1']['room_id'] == '0':
 		rooms = process_entrance_data(sensor_data, rooms)
 	else:
@@ -80,10 +79,8 @@ def update_room_occupancy(sensor_data: SensorDataType) -> tuple[str, list['Room'
 	return sensor_data['sensor_id'], rooms
 
 
-def process_sensor_data(room_list: list['Room']) -> None:
+def process_sensor_data(rooms: list['Room']) -> None:
 	"""Processes the sensor data by consuming messages from the sensor-data topic and runs the calculate_crowd_factor function."""
 	Database()
-	global rooms
-	rooms = room_list
-	consumer = Consumer(update_room_occupancy, 'sensor-data')
+	consumer = Consumer(update_room_occupancy, 'sensor-data', rooms)
 	consumer.consume_messages()
