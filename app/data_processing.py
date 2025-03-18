@@ -4,7 +4,7 @@ from db import Database
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from app.data_processing.crowd_factor import process_sensor_data
+from app.data_processing.data_processing import process_sensor_data
 from app.utils.load_objects import load_rooms
 
 Database()
