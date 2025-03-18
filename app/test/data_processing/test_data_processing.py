@@ -165,6 +165,8 @@ def test_update_room_occupancy_save_data(rooms, monkeypatch, mocker):
 	assert updated_rooms[1].occupancy == 0
 	save_data_mock.assert_called_once_with(updated_rooms)
 	
+ 
+
 
 def test_process_sensor_data(monkeypatch, mocker, rooms):
 	"""Tests `process_sensor_data()` function."""
@@ -174,3 +176,28 @@ def test_process_sensor_data(monkeypatch, mocker, rooms):
 	process_sensor_data(rooms)
 
 	mock_consumer.assert_called_once_with(update_room_occupancy, 'sensor-data')
+
+def test_100_runs(rooms, monkeypatch):
+	from app.data_processing.data_processing import update_room_occupancy, SensorDataType
+	import random
+	updated_rooms = rooms
+	
+	monkeypatch.setattr('app.data_processing.data_processing.save_data', lambda x: None)
+
+	for i in range(100):
+		sensor_data: SensorDataType = {
+			'sensor_id': f'loop_{i}',
+			'room1': {
+					'room_id': str(random.choice(['0', '1', '2'])),
+					'movements': random.randint(0, 5),
+			},
+			'room2': {
+					'room_id': str(random.choice(['1', '2'])),
+					'movements': random.randint(0, 5),
+			},
+		}
+		_, updated_rooms = update_room_occupancy(sensor_data, rooms)
+
+	for room in updated_rooms:
+		assert room.occupancy >= 0, "Occupancy should never go negative"
+	assert any(room.occupancy > 0 for room in updated_rooms), "At least one room should have occupants"
