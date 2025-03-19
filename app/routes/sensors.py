@@ -35,13 +35,13 @@ async def fetch_sensors():
   responses=get_sensor_by_id_responses,
 )
 async def fetch_sensor_by_id(sensor_id: str) -> SensorModel:
-  """Get a sensor by its id.
-  Args:
-    sensor_id (str): The id of the sensor.
-  Returns:
-    dict: A dictionary containing the sensor.
-  """
-  sensor = get_sensor_by_id(sensor_id)
-  return await sensor
+	"""Get a sensor by its id.
+	Args:
+		sensor_id (str): The id of the sensor.
+	Returns:
+		dict: A dictionary containing the sensor.
+	"""
+	sensor = await get_sensor_by_id(sensor_id)
+	return sensor
 
 
