@@ -10,6 +10,12 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# Copy entrypoint script and make it executable
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
+
+# Expose the port the app will run on
 EXPOSE 8002
 
-CMD ["python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8002"]
+# Command to wait for Kafka and Zookeeper before starting the app
+CMD ["/start.sh"]
