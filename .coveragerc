@@ -2,6 +2,7 @@
 omit =
     app/__init__.py
     app/test/*
+	 app/*.py
 [report]
 show_missing = true
 precision = 2

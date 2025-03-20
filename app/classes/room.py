@@ -25,14 +25,14 @@ class Room:
 		self.occupancy += occupants
 
 	def remove_occupants(self, occupants: int) -> None:
-		"""Decrements the room's occupancy by the number of occupants given.
-
-		Raises:
-				Exception: If the room's occupancy woulde be less than zero.
 		"""
-		if self.occupancy - occupants < 0:
-			raise Exception('Room occupancy cannot be less than zero. The room is empty.')
-		self.occupancy -= occupants
+		Decrements the room's occupancy by the number of occupants,
+		ensuring it never goes below zero.
+		"""
+		if occupants <= 0:
+			return
+		actual_removed = min(occupants, self.occupancy)
+		self.occupancy -= actual_removed
 
 	def __str__(self) -> str:
 		return f'Room (id={self.id}, name={self.name}, type={self.type}, occupancy={self.occupancy}, crowdFactor={self.crowd_factor}, area={self.area}, sensors={["Sensor id: " + sensor.id.__str__() for sensor in self.sensors]})'
