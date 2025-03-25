@@ -74,7 +74,7 @@ To run the application, follow the steps below. The order of the steps is import
    ```
 2. Run the data processor:
    ```bash
-   python -m app.data_processing
+   python -m app.data_processor
    ```
 3. Run the simulation:
    ```bash
