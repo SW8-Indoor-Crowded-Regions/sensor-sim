@@ -26,4 +26,4 @@ COPY . .
 EXPOSE 8002
 
 # Command to wait for Kafka and Zookeeper before starting the app
-CMD ["/wait-for-it.sh", "kafka:9092", "--", "python", "-m", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8002"]
+CMD ["/wait-for-it.sh", "kafka:9092", "--", "/start.sh"]
