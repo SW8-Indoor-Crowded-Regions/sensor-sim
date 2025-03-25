@@ -6,7 +6,7 @@ from app.utils.response_examples.sensors import get_sensor_by_id_responses, get_
 router = APIRouter(prefix='/sensors', tags=['Sensors'])
 
 @router.get(
-  '/',
+  '',
   response_model=SensorListModel,
   summary='Get all sensors',
   tags=['Sensors'],
