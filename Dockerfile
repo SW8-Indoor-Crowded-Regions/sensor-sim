@@ -26,4 +26,4 @@ COPY . .
 EXPOSE 8002
 
 # Command to wait for Kafka and Zookeeper before starting the app
-CMD ["/wait-for-it.sh", "kafka:9092", "--", "/start.sh"]
+CMD ["/wait-for-it.sh", "kafka:9092", "--", "./start.sh"]
