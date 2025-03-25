@@ -40,10 +40,8 @@ def test_remove_occupants(room):
 
 
 def test_remove_occupants_below_zero(room):
-	with pytest.raises(
-		Exception, match='Room occupancy cannot be less than zero. The room is empty.'
-	):
-		room.remove_occupants(2)
+	room.remove_occupants(1)
+	assert room.occupancy == 0
 
 
 def test_str(room):

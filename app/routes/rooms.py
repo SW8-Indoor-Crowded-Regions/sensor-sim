@@ -7,7 +7,7 @@ router = APIRouter(prefix='/rooms', tags=['Rooms'])
 
 
 @router.get(
-	'/',
+	'', #path here set to /rooms as default
 	response_model=RoomListModel,
 	summary='Get all rooms',
 	tags=['Rooms'],
