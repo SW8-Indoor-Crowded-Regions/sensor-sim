@@ -82,7 +82,7 @@ To run the application, follow the steps below. The order of the steps is import
    ```
 4. Start the API (development mode):
    ```bash
-   uvicorn app.main:app --reload
+   python -m app.main
    ```
 5. Open the API documentation in your browser (after starting the API):
 	```bash
