@@ -1,26 +1,28 @@
-from pydantic import BaseModel, field_serializer
+from pydantic import BaseModel, field_serializer, model_validator
+from typing import Union
 from typing import List
 from bson import ObjectId, DBRef
 
 class SensorModel(BaseModel):
-	id: ObjectId
-	rooms: List[DBRef]
-	model_config = {
-        "arbitrary_types_allowed": True
-    }
- 
-	def __init__(self, id, rooms):
-		id = ObjectId(id)
-		rooms = [DBRef('rooms', room) for room in rooms]
-		super().__init__(id=id, rooms=rooms)
+	id: Union[str, ObjectId]
+	rooms: List[Union[str, DBRef]]
 
-	@field_serializer('id')
+	model_config = {"arbitrary_types_allowed": True}
+
+	@model_validator(mode="before")
+	def convert_fields(cls, values):
+		"""Convert fields to correct types before validation."""
+		values["id"] = str(values["id"]) if isinstance(values["id"], ObjectId) else values["id"]
+		values["rooms"] = [str(room.id) if isinstance(room, DBRef) else str(room) for room in values["rooms"]]
+		return values
+
+	@field_serializer("id")
 	def serialize_id(self, id, _info):
 		return str(id)
 
-	@field_serializer('rooms')
+	@field_serializer("rooms")
 	def serialize_rooms(self, rooms, _info):
-		return [str(room.id) for room in rooms]
+		return [str(room) for room in rooms]
 		  
 
 class SensorListModel(BaseModel):
