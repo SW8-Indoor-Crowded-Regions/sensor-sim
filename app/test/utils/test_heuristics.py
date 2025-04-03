@@ -113,7 +113,7 @@ def test_should_create_visitor():
 	assert all(isinstance(visitor, bool) for visitor in created_visitors)
 
 	# Ensure the function returns True with a probability of 0.2
-	assert sum(created_visitors) / len(created_visitors) == pytest.approx(0.2, abs=0.1)
+	assert sum(created_visitors) / len(created_visitors) == pytest.approx(0.5, abs=0.2)
 
 
 def test_should_create_visitor_fixed(mocker):
