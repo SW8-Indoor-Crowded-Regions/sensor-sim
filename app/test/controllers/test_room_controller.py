@@ -18,6 +18,7 @@ def sample_room() -> Room:
 		name='Room A',
 		type='LOBBY',
 		crowd_factor=1.0,
+		popularity_factor=1.0,
 		area=30,
 		longitude=40.0,
 		latitude=-73.0,
@@ -32,6 +33,7 @@ def mock_rooms():
 			name='Room A',
 			type='LOBBY',
 			crowd_factor=1.0,
+			popularity_factor=1.0,
 			area=30,
 			longitude=40.0,
 			latitude=-73.0,
@@ -41,6 +43,7 @@ def mock_rooms():
 			name='Room B',
 			type='OFFICE',
 			crowd_factor=0.5,
+			popularity_factor=0.5,
 			area=20,
 			longitude=41.0,
 			latitude=-72.0,
@@ -91,7 +94,7 @@ def test_validate_room_id(room_id, is_valid):
 async def test_fetch_room_by_id_found(mock_objects):
 	room = sample_room()
 	mock_objects.return_value.first.return_value = room
-	result = await fetch_room_by_id(str(room.id)) # type: ignore
+	result = await fetch_room_by_id(str(room.id))  # type: ignore
 	assert result == room
 
 
@@ -110,7 +113,7 @@ async def test_fetch_room_by_id_not_found(mock_objects):
 async def test_get_room_by_id_success(mock_fetch_room):
 	room = sample_room()
 	mock_fetch_room.return_value = room
-	result = await get_room_by_id(str(room.id)) # type: ignore
+	result = await get_room_by_id(str(room.id))  # type: ignore
 	assert result == room
 
 

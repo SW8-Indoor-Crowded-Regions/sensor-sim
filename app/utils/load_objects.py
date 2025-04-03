@@ -16,7 +16,7 @@ def load_rooms() -> list[Room]:
 
 
 def load_sensors(rooms: list['Room']) -> list[Sensor]:
-	"""Load sensors from the sensors.json file and return a list of Sensor objects.
+	"""Load sensors from the database and return a list of Sensor objects.
 	Returns:
 			list[Sensor]: A list of Sensor objects.
 	"""
