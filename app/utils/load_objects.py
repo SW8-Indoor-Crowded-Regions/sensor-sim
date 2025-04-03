@@ -11,7 +11,6 @@ def load_rooms() -> list[Room]:
 	rooms = []
 	room_data = RoomModel.objects()  # type: ignore
 	for room in room_data:
-		print(room)
 		rooms.append(Room(room, room['crowd_factor'], room['popularity_factor'], room['area'], []))
 	return rooms
 
