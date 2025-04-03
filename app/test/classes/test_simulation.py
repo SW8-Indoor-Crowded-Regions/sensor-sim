@@ -14,7 +14,7 @@ class StopSimulation(Exception):
 @pytest.fixture
 def room():
 	"""Fixture for creating a mock room."""
-	return Room({'id': 0, 'name': 'Room 1', 'type': 'TEST'}, 1.0, 100.0, [])
+	return Room({'id': 0, 'name': 'Room 1', 'type': 'TEST'}, 1.0, 1.2, 100.0, [])
 
 
 @pytest.fixture

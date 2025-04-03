@@ -11,12 +11,12 @@ def load_rooms() -> list[Room]:
 	rooms = []
 	room_data = RoomModel.objects()  # type: ignore
 	for room in room_data:
-		rooms.append(Room(room, room['crowd_factor'], room['area'], []))
+		rooms.append(Room(room, room['crowd_factor'], room['popularity_factor'], room['area'], []))
 	return rooms
 
 
 def load_sensors(rooms: list['Room']) -> list[Sensor]:
-	"""Load sensors from the sensors.json file and return a list of Sensor objects.
+	"""Load sensors from the database and return a list of Sensor objects.
 	Returns:
 			list[Sensor]: A list of Sensor objects.
 	"""

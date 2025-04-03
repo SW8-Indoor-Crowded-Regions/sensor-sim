@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-# Populate the database
-python -m populate
-
 # Wait for Kafka to be ready
 /wait-for-it.sh kafka:9092 --timeout=30 -- echo "Kafka is up"
 

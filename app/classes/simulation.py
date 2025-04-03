@@ -6,7 +6,9 @@ import time
 
 
 class Simulation:
-	def __init__(self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None, update_interval=1):
+	def __init__(
+		self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None, update_interval=1
+	):
 		self.sensors: list['Sensor'] = sensors
 		self.rooms: list['Room'] = rooms
 		self.starting_room: 'Room' = rooms[0]
@@ -19,7 +21,7 @@ class Simulation:
 		entrance_sensor = Sensor(
 			0,
 			[
-				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 0, []),
+				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 1.0, 0, []),
 				self.starting_room,
 			],
 		)

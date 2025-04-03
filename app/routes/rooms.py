@@ -5,7 +5,6 @@ from app.utils.response_examples.rooms import get_room_by_id_responses, get_room
 
 router = APIRouter(prefix='/rooms', tags=['Rooms'])
 
-
 @router.get(
 	'', #path here set to /rooms as default
 	response_model=RoomListModel,
@@ -21,8 +20,8 @@ async def fetch_rooms():
 	Returns:
 	  dict: A dictionary containing a list of rooms.
 	"""
-	rooms = get_all_rooms()
-	return {'rooms': await rooms}
+	rooms = await get_all_rooms()
+	return {'rooms': rooms}
 
 
 @router.get(
