@@ -1,7 +1,6 @@
 from db.models.room import Room
 from db.models.sensor import Sensor
 from db.database import Database
-from bson import ObjectId
 import json
 
 db = Database()
