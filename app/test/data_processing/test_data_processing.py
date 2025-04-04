@@ -12,9 +12,9 @@ from app.data_processing.data_processing import SensorDataType
 @pytest.fixture
 def rooms():
 	"""Creates a set of Room objects for testing."""
-	room1 = Room({'id': '1', 'name': 'Room 1', 'type': 'TEST'}, 1.0, 100.0, [])
-	room2 = Room({'id': '2', 'name': 'Room 2', 'type': 'TEST'}, 1.0, 100.0, [])
-	room3 = Room({'id': '3', 'name': 'Room 3', 'type': 'TEST'}, 1.0, 100.0, [])
+	room1 = Room({'id': '1', 'name': 'Room 1', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
+	room2 = Room({'id': '2', 'name': 'Room 2', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
+	room3 = Room({'id': '3', 'name': 'Room 3', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
 	return [room1, room2, room3]
 
 
@@ -132,11 +132,14 @@ def test_update_room_occupancy_invalid_rooms(rooms, monkeypatch):
 		'room1': {'room_id': '1', 'movements': 1},
 		'room2': {'room_id': '2', 'movements': 1},
 	}
- 
-	monkeypatch.setattr('app.data_processing.data_processing.process_room_to_room_data', lambda x, y: None)
+
+	monkeypatch.setattr(
+		'app.data_processing.data_processing.process_room_to_room_data', lambda x, y: None
+	)
 
 	with pytest.raises(ValueError, match='Rooms are required'):
 		update_room_occupancy(sensor_data, rooms)
+
 
 def test_update_room_occupancy_save_data(rooms, monkeypatch, mocker):
 	"""Tests `update_room_occupancy()` with saving data every 100 updates."""
@@ -157,15 +160,12 @@ def test_update_room_occupancy_save_data(rooms, monkeypatch, mocker):
 	assert updated_rooms[0].occupancy == 2
 	assert updated_rooms[1].occupancy == 1
 	save_data_mock.assert_not_called()
- 
- 
+
 	sensor_id, updated_rooms = update_room_occupancy(sensor_data, updated_rooms)
 	assert sensor_id == '7'
 	assert updated_rooms[0].occupancy == 3
 	assert updated_rooms[1].occupancy == 0
 	save_data_mock.assert_called_once_with(updated_rooms)
-	
- 
 
 
 def test_process_sensor_data(monkeypatch, mocker, rooms):
@@ -177,27 +177,31 @@ def test_process_sensor_data(monkeypatch, mocker, rooms):
 
 	mock_consumer.assert_called_once_with(update_room_occupancy, 'sensor-data', rooms)
 
+
 def test_100_runs(rooms, monkeypatch):
 	from app.data_processing.data_processing import update_room_occupancy, SensorDataType
 	import random
+
 	updated_rooms = rooms
-	
+
 	monkeypatch.setattr('app.data_processing.data_processing.save_data', lambda x: None)
 
 	for i in range(100):
 		sensor_data: SensorDataType = {
 			'sensor_id': f'loop_{i}',
 			'room1': {
-					'room_id': str(random.choice(['0', '1', '2'])),
-					'movements': random.randint(0, 5),
+				'room_id': str(random.choice(['0', '1', '2'])),
+				'movements': random.randint(0, 5),
 			},
 			'room2': {
-					'room_id': str(random.choice(['1', '2'])),
-					'movements': random.randint(0, 5),
+				'room_id': str(random.choice(['1', '2'])),
+				'movements': random.randint(0, 5),
 			},
 		}
 		_, updated_rooms = update_room_occupancy(sensor_data, rooms)
 
 	for room in updated_rooms:
-		assert room.occupancy >= 0, "Occupancy should never go negative"
-	assert any(room.occupancy > 0 for room in updated_rooms), "At least one room should have occupants"
+		assert room.occupancy >= 0, 'Occupancy should never go negative'
+	assert any(room.occupancy > 0 for room in updated_rooms), (
+		'At least one room should have occupants'
+	)
