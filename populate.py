@@ -194,14 +194,17 @@ def create_rooms_and_sensors():
 	#    We'll keep track of pairs we've already processed to avoid duplicates.
 	created_pairs = set()
 	for room_name, neighbors in ROOM_ADJACENCY.items():
-		for neighbor_name in neighbors:
+		for neighbor_name, (lat, long) in neighbors:
 			# Sort the pair so (201B, 201C) is the same as (201C, 201B)
 			pair = tuple(sorted([room_name, neighbor_name]))
 
 			if pair not in created_pairs:
 				sensor_name = f'Sensor_{pair[0]}_{pair[1]}'
 				sensor = Sensor(
-					name=sensor_name, rooms=[room_objects[pair[0]], room_objects[pair[1]]]
+					name=sensor_name, 
+					rooms=[room_objects[pair[0]], room_objects[pair[1]]],
+					latitude=lat,
+					longitude=long
 				)
 				sensor.save()
 
