@@ -6,13 +6,14 @@ from bson import ObjectId, DBRef
 class SensorModel(BaseModel):
 	id: Union[str, ObjectId]
 	rooms: List[Union[str, DBRef]]
-
+	latitude: float
+	longitude: float
 	model_config = {"arbitrary_types_allowed": True}
 
 	@model_validator(mode="before")
 	def convert_fields(cls, values):
 		"""Convert fields to correct types before validation."""
-		values["id"] = str(values["id"]) if isinstance(values["id"], ObjectId) else values["id"]
+		values["_id"] = str(values["_id"]) if isinstance(values["_id"], ObjectId) else values["_id"]
 		values["rooms"] = [str(room.id) if isinstance(room, DBRef) else str(room) for room in values["rooms"]]
 		return values
 
