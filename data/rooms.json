@@ -1,0 +1,1443 @@
+[{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fdc"
+  },
+  "name": "RW1",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9881071813389886,
+  "popularity_factor": 1.2130957889364573,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fdd"
+  },
+  "name": "KAFETERIA",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8850220129951176,
+  "popularity_factor": 1.0262709092368454,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fde"
+  },
+  "name": "107",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2113761043359343,
+  "popularity_factor": 1.05784465464095,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fdf"
+  },
+  "name": "106",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8437277848131974,
+  "popularity_factor": 0.46675715507148263,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe0"
+  },
+  "name": "105",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.4160111897166103,
+  "popularity_factor": 0.98834411063754,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe1"
+  },
+  "name": "104",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.4780002259348187,
+  "popularity_factor": 0.9901825498203624,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe2"
+  },
+  "name": "103",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.6853240362068438,
+  "popularity_factor": 1.282486730390145,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe3"
+  },
+  "name": "102",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5896547688587315,
+  "popularity_factor": 0.7022177049977197,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe4"
+  },
+  "name": "101",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.4212627757784635,
+  "popularity_factor": 0.8365974055413034,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe5"
+  },
+  "name": "HALL",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9002712133030145,
+  "popularity_factor": 0.3131767110565604,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe6"
+  },
+  "name": "109",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7802003348211105,
+  "popularity_factor": 0.8907156168875547,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe7"
+  },
+  "name": "108",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9907102874297101,
+  "popularity_factor": 0.6740558344288134,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe8"
+  },
+  "name": "SHOP",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5456933648076111,
+  "popularity_factor": 1.183431581571881,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fe9"
+  },
+  "name": "LW1",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.209828392440765,
+  "popularity_factor": 0.8800275694600351,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fea"
+  },
+  "name": "114",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.22517894570201907,
+  "popularity_factor": 0.6669155004651831,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6feb"
+  },
+  "name": "115",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2936174187200598,
+  "popularity_factor": 1.1966549295310134,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fec"
+  },
+  "name": "117",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1320223449240012,
+  "popularity_factor": 1.0923273390390509,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fed"
+  },
+  "name": "STAGE",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9307145386567403,
+  "popularity_factor": 0.4930131640344985,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fee"
+  },
+  "name": "113",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2219514182614457,
+  "popularity_factor": 1.1176919619223074,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fef"
+  },
+  "name": "AUDITORIUM",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.855317159509622,
+  "popularity_factor": 0.608494262605532,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff0"
+  },
+  "name": "STUDYROOM",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.6072905221435676,
+  "popularity_factor": 0.749663185314295,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff1"
+  },
+  "name": "201A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8309398434093834,
+  "popularity_factor": 0.37581090241975035,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff2"
+  },
+  "name": "201B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1712830065881297,
+  "popularity_factor": 1.151590500103611,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff3"
+  },
+  "name": "201C",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.33515786491478483,
+  "popularity_factor": 1.1932175973506394,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff4"
+  },
+  "name": "201D",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5536579124661428,
+  "popularity_factor": 0.8870144373241061,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff5"
+  },
+  "name": "201E",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8151859310249362,
+  "popularity_factor": 1.297787963598207,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff6"
+  },
+  "name": "202",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.503693774998164,
+  "popularity_factor": 0.7905351808296566,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff7"
+  },
+  "name": "203",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.3269008232952766,
+  "popularity_factor": 1.2666024544798358,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff8"
+  },
+  "name": "204",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5389674170521738,
+  "popularity_factor": 1.1632260086761652,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ff9"
+  },
+  "name": "211B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9940569732462436,
+  "popularity_factor": 1.4836902482775205,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ffa"
+  },
+  "name": "211A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9723464383386553,
+  "popularity_factor": 0.7968009902005347,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ffb"
+  },
+  "name": "210B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.28830376427328,
+  "popularity_factor": 0.8584703361980401,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ffc"
+  },
+  "name": "210A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.5649921511188798,
+  "popularity_factor": 1.470108134592688,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ffd"
+  },
+  "name": "208B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.120209324006503,
+  "popularity_factor": 0.6842389866468809,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6ffe"
+  },
+  "name": "209",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.3427073401950314,
+  "popularity_factor": 0.9578089095791279,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff6fff"
+  },
+  "name": "208A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2737931931889648,
+  "popularity_factor": 1.1299288933247722,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7000"
+  },
+  "name": "207",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1357691128997511,
+  "popularity_factor": 1.0204503983318987,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7001"
+  },
+  "name": "206",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.3818165007676932,
+  "popularity_factor": 0.5130595780950208,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7002"
+  },
+  "name": "205",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2559831366640954,
+  "popularity_factor": 0.5399395532398842,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7003"
+  },
+  "name": "T2",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.38797693816227696,
+  "popularity_factor": 1.2467712572918674,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7004"
+  },
+  "name": "T3",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.6307596125084144,
+  "popularity_factor": 1.1928997992856802,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7005"
+  },
+  "name": "P1",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9676564898751578,
+  "popularity_factor": 0.919805044232487,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7006"
+  },
+  "name": "P2",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.732888521483607,
+  "popularity_factor": 1.2102826593072922,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7007"
+  },
+  "name": "P3",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1501348665267008,
+  "popularity_factor": 0.781200335425541,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7008"
+  },
+  "name": "P4",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0010966960758398,
+  "popularity_factor": 0.40788873423216954,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff7009"
+  },
+  "name": "212",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2779973394925839,
+  "popularity_factor": 1.3776563303692488,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff700a"
+  },
+  "name": "213",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5466380546209252,
+  "popularity_factor": 0.7421818453350189,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff700b"
+  },
+  "name": "214",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.4918396766578848,
+  "popularity_factor": 1.2042495124939692,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff700c"
+  },
+  "name": "215",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0009643162403896,
+  "popularity_factor": 0.5897162626101591,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff700d"
+  },
+  "name": "216",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5313879568604446,
+  "popularity_factor": 1.2611914152967298,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb1f0b23f5290bff700e"
+  },
+  "name": "T1",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0748486920855378,
+  "popularity_factor": 1.333676978730105,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff700f"
+  },
+  "name": "217A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9590272060813207,
+  "popularity_factor": 1.2801097395229273,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7010"
+  },
+  "name": "229",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2029087544343264,
+  "popularity_factor": 1.339375598189415,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7011"
+  },
+  "name": "228",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8539933505544091,
+  "popularity_factor": 0.7152845405630666,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7012"
+  },
+  "name": "227",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2304059974074144,
+  "popularity_factor": 0.7381729108523106,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7013"
+  },
+  "name": "217F",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0942157911023898,
+  "popularity_factor": 0.9418205274153103,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7014"
+  },
+  "name": "217E",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9215875110519033,
+  "popularity_factor": 1.2746449402258035,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7015"
+  },
+  "name": "217D",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7134511947956381,
+  "popularity_factor": 0.7893149920762472,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7016"
+  },
+  "name": "217C",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7782696782142308,
+  "popularity_factor": 0.8917226807565237,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7017"
+  },
+  "name": "217B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9338717266690855,
+  "popularity_factor": 1.0060325662462657,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7018"
+  },
+  "name": "218A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.4801682082358235,
+  "popularity_factor": 1.2396713657371374,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7019"
+  },
+  "name": "218B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7763803409759348,
+  "popularity_factor": 0.8530883982847446,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701a"
+  },
+  "name": "219",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.720278096863886,
+  "popularity_factor": 1.1420369832908186,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701b"
+  },
+  "name": "220",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.035125164844589,
+  "popularity_factor": 1.2114402991610225,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701c"
+  },
+  "name": "P7",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.025206029092113,
+  "popularity_factor": 1.134460965002902,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701d"
+  },
+  "name": "222",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.4881634584565164,
+  "popularity_factor": 1.1436431371544633,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701e"
+  },
+  "name": "223",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1949063220994207,
+  "popularity_factor": 0.7534377176531885,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff701f"
+  },
+  "name": "224",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7670681648931486,
+  "popularity_factor": 1.0115903898236396,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7020"
+  },
+  "name": "225",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.3384919826161639,
+  "popularity_factor": 1.2161750621009118,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7021"
+  },
+  "name": "221",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9760160993519392,
+  "popularity_factor": 0.9203707925024313,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7022"
+  },
+  "name": "226",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9603177438785475,
+  "popularity_factor": 0.435441642070007,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7023"
+  },
+  "name": "P5",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.4550051785810252,
+  "popularity_factor": 1.3066937740725721,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7024"
+  },
+  "name": "P8",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0264368222903504,
+  "popularity_factor": 1.0241339147045427,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7025"
+  },
+  "name": "T7",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.23382580750392615,
+  "popularity_factor": 0.902918038293239,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7026"
+  },
+  "name": "T6",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1505080474587652,
+  "popularity_factor": 1.2622085676308876,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7027"
+  },
+  "name": "270B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.2,
+  "popularity_factor": 0.6592161750164531,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7028"
+  },
+  "name": "270A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7533615771393823,
+  "popularity_factor": 1.0519549346240973,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff7029"
+  },
+  "name": "262",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0980627012335544,
+  "popularity_factor": 1.4212026193169498,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb200b23f5290bff702a"
+  },
+  "name": "261",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8902788041546745,
+  "popularity_factor": 1.0135326119287198,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff702b"
+  },
+  "name": "272",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.588726245150576,
+  "popularity_factor": 0.7289263637637792,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff702c"
+  },
+  "name": "260",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2479541355235613,
+  "popularity_factor": 1.453420723869761,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff702d"
+  },
+  "name": "P9",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9787210929906679,
+  "popularity_factor": 1.4576930887790587,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff702e"
+  },
+  "name": "269A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.34821651869766373,
+  "popularity_factor": 1.2516534636004313,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff702f"
+  },
+  "name": "269B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.6895732149668887,
+  "popularity_factor": 1.0193030335019588,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7030"
+  },
+  "name": "263B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.5820236019737142,
+  "popularity_factor": 0.6051949536936233,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7031"
+  },
+  "name": "263C",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.651073738812989,
+  "popularity_factor": 0.8944827083754325,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7032"
+  },
+  "name": "263A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.8523212134670567,
+  "popularity_factor": 0.9206247611048491,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7033"
+  },
+  "name": "P6",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.5339520023825504,
+  "popularity_factor": 0.7800921896502032,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7034"
+  },
+  "name": "P10",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.7735500313777933,
+  "popularity_factor": 0.4767415958350992,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7035"
+  },
+  "name": "T5",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1298696831339614,
+  "popularity_factor": 1.030750008679407,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7036"
+  },
+  "name": "T4",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.047567996039912,
+  "popularity_factor": 1.5131638008868824,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7037"
+  },
+  "name": "268A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0158681346612266,
+  "popularity_factor": 0.6044102709448346,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7038"
+  },
+  "name": "268B",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9982638969205855,
+  "popularity_factor": 0.6442063390143665,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7039"
+  },
+  "name": "264",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.062267200113162,
+  "popularity_factor": 1.0744036566673563,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703a"
+  },
+  "name": "264A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.031339844868515,
+  "popularity_factor": 1.237697659446589,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703b"
+  },
+  "name": "267",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9084821029312437,
+  "popularity_factor": 0.768251164982226,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703c"
+  },
+  "name": "265",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0377643204641598,
+  "popularity_factor": 1.033250136995561,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703d"
+  },
+  "name": "266",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.6901073697353605,
+  "popularity_factor": 1.4599329372256336,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703e"
+  },
+  "name": "300",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.677939743550004,
+  "popularity_factor": 1.2239448485625524,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff703f"
+  },
+  "name": "301",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.6738894319360436,
+  "popularity_factor": 0.8410901319761238,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7040"
+  },
+  "name": "302",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.6813328869307367,
+  "popularity_factor": 1.4031620256025694,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7041"
+  },
+  "name": "300A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.051616911191495,
+  "popularity_factor": 0.9834040793847731,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7042"
+  },
+  "name": "300B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.5344363667657304,
+  "popularity_factor": 1.0265163725338304,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7043"
+  },
+  "name": "300C",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.501741527372231,
+  "popularity_factor": 1.0339347434874153,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7044"
+  },
+  "name": "301A",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.0968995705649445,
+  "popularity_factor": 1.4462811336288723,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7045"
+  },
+  "name": "301B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.326029826745957,
+  "popularity_factor": 0.9604811351204591,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7046"
+  },
+  "name": "301C",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.3277268932539292,
+  "popularity_factor": 1.0873382745936877,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7047"
+  },
+  "name": "301D",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.6912846801841455,
+  "popularity_factor": 1.358621544418966,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7048"
+  },
+  "name": "302A",
+  "type": "EXHIBITION",
+  "crowd_factor": 0.9018141157183857,
+  "popularity_factor": 0.3739959239253053,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff7049"
+  },
+  "name": "302B",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.2951952551394494,
+  "popularity_factor": 1.463072986193673,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+},
+{
+  "_id": {
+    "$oid": "67efbb210b23f5290bff704a"
+  },
+  "name": "302C",
+  "type": "EXHIBITION",
+  "crowd_factor": 1.1469924246330334,
+  "popularity_factor": 0.8421984339317442,
+  "occupants": 0,
+  "area": 50,
+  "longitude": 0,
+  "latitude": 0
+}]

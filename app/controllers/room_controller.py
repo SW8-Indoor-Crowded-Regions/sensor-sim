@@ -35,7 +35,7 @@ def validate_room_id(room_id: str):
 
 
 async def fetch_room_by_id(room_id: str) -> RoomModel:
-	room = Room.objects(id=bson.ObjectId(room_id)).first()  # type: ignore
+	room = Room.objects(_id=bson.ObjectId(room_id)).first()  # type: ignore
 	if not room:
 		raise HTTPException(status_code=404, detail='Room not found.')
 	room.id = str(room.id)

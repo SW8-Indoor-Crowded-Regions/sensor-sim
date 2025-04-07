@@ -6,19 +6,22 @@ import time
 
 
 class Simulation:
-	def __init__(self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None):
+	def __init__(
+		self, rooms: list['Room'], sensors: list['Sensor'], max_iterations=None, update_interval=1
+	):
 		self.sensors: list['Sensor'] = sensors
 		self.rooms: list['Room'] = rooms
 		self.starting_room: 'Room' = rooms[0]
 		self.visitors: list['Visitor'] = []
 		self.max_iterations: None | int = max_iterations
+		self.update_interval: int = update_interval
 
 	def run(self) -> None:
 		"""Runs the simulation."""
 		entrance_sensor = Sensor(
 			0,
 			[
-				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 0, []),
+				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 1.0, 0, []),
 				self.starting_room,
 			],
 		)

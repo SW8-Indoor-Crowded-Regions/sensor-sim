@@ -16,10 +16,11 @@ def choose_next_move(visitor: 'Visitor') -> 'Sensor | None':
 	movement_options = visitor.get_movement_options()
 
 	if not movement_options:
-		raise Exception('No movement options found for visitor:', visitor)
+		raise Exception('No movement options found for visitor:', visitor.__str__())
 
 	# Chance to stay in the same room
-	if random.random() < 0.1:
+	stay_probability = visitor.get_current_room().popularity_factor * 0.1
+	if random.random() < stay_probability:
 		return None
 
 	weights = get_weights(movement_options, visitor)
@@ -32,7 +33,7 @@ def choose_next_move(visitor: 'Visitor') -> 'Sensor | None':
 	return random.choices(movement_options, normalized_weights)[0]
 
 
-def get_weights(movement_options: list["Sensor"], visitor: 'Visitor') -> list[float]:
+def get_weights(movement_options: list['Sensor'], visitor: 'Visitor') -> list[float]:
 	"""Returns the weights for each movement option.
 
 	Args:
@@ -59,4 +60,4 @@ def should_create_visitor() -> bool:
 	Returns:
 			bool: True if a visitor should be created, False otherwise.
 	"""
-	return random.random() < 0.2
+	return random.random() < 0.5

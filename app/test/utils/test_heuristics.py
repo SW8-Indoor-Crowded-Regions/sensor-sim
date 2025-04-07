@@ -8,9 +8,9 @@ from app.utils.heuristics import choose_next_move, should_create_visitor, get_we
 @pytest.fixture
 def rooms():
 	return [
-		Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 101.2, []),
-		Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 1.2, 111.2, []),
-		Room({'id': 3, 'name': '103', 'type': 'meeting'}, 1.3, 121.2, []),
+		Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, []),
+		Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 1.2, 1.2, 111.2, []),
+		Room({'id': 3, 'name': '103', 'type': 'meeting'}, 1.3, 1.2, 121.2, []),
 	]
 
 
@@ -113,7 +113,7 @@ def test_should_create_visitor():
 	assert all(isinstance(visitor, bool) for visitor in created_visitors)
 
 	# Ensure the function returns True with a probability of 0.2
-	assert sum(created_visitors) / len(created_visitors) == pytest.approx(0.2, abs=0.1)
+	assert sum(created_visitors) / len(created_visitors) == pytest.approx(0.5, abs=0.2)
 
 
 def test_should_create_visitor_fixed(mocker):

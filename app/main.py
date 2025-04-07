@@ -1,11 +1,7 @@
 import uvicorn
-import os
-import sys
-
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
 from fastapi import FastAPI
 from app.routes import rooms
+from app.routes import sensors
 from db.database import Database
 from app.utils.data_models.general import HealthCheckModel
 from contextlib import asynccontextmanager
@@ -29,6 +25,7 @@ app = FastAPI(
 )
 
 app.include_router(rooms.router)
+app.include_router(sensors.router)
 
 
 @app.get(
@@ -49,4 +46,4 @@ async def health_check():
 
 
 if __name__ == '__main__':
-	uvicorn.run('main:app', host='0.0.0.0', port=8002, reload=True)
+	uvicorn.run('app.main:app', host='0.0.0.0', port=8002, reload=True)
