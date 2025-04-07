@@ -2,7 +2,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff704b"
   },
-  "name": "Sensor_RW1_T2",
+  "name": "Sensor_RW1_207",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6fdc"
@@ -18,7 +18,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff704c"
   },
-  "name": "Sensor_RW1_T3",
+  "name": "Sensor_RW1_207",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6fdc"
@@ -210,7 +210,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7058"
   },
-  "name": "Sensor_HALL_T1",
+  "name": "Sensor_HALL_200",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6fe5"
@@ -466,7 +466,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7068"
   },
-  "name": "Sensor_STUDYROOM_T4",
+  "name": "Sensor_STUDYROOM_302",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff0"
@@ -498,7 +498,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706a"
   },
-  "name": "Sensor_201A_201B",
+  "name": "Sensor_201a_201b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff1"
@@ -514,7 +514,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706b"
   },
-  "name": "Sensor_201A_211B",
+  "name": "Sensor_201a_211b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff1"
@@ -530,7 +530,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706c"
   },
-  "name": "Sensor_201A_202",
+  "name": "Sensor_201a_202",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff1"
@@ -546,7 +546,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706d"
   },
-  "name": "Sensor_201A_P1",
+  "name": "Sensor_201a_200",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff1"
@@ -562,7 +562,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706e"
   },
-  "name": "Sensor_201B_201C",
+  "name": "Sensor_201b_201c",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff2"
@@ -578,7 +578,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff706f"
   },
-  "name": "Sensor_201C_201D",
+  "name": "Sensor_201c_201d",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff3"
@@ -594,7 +594,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7070"
   },
-  "name": "Sensor_201D_201E",
+  "name": "Sensor_201d_201e",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff4"
@@ -610,7 +610,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7071"
   },
-  "name": "Sensor_201D_209",
+  "name": "Sensor_201d_209",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff4"
@@ -626,7 +626,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7072"
   },
-  "name": "Sensor_201E_204",
+  "name": "Sensor_201e_204",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff5"
@@ -658,7 +658,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7074"
   },
-  "name": "Sensor_202_P1",
+  "name": "Sensor_202_200",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff6"
@@ -706,7 +706,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7077"
   },
-  "name": "Sensor_211A_211B",
+  "name": "Sensor_211a_211b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ffa"
@@ -722,7 +722,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7078"
   },
-  "name": "Sensor_210B_211A",
+  "name": "Sensor_210b_211a",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ffb"
@@ -738,7 +738,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7079"
   },
-  "name": "Sensor_210A_210B",
+  "name": "Sensor_210a_210b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ffc"
@@ -754,7 +754,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707a"
   },
-  "name": "Sensor_209_210A",
+  "name": "Sensor_209_210a",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ffe"
@@ -770,7 +770,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707b"
   },
-  "name": "Sensor_208B_209",
+  "name": "Sensor_208b_209",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ffd"
@@ -786,7 +786,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707c"
   },
-  "name": "Sensor_208A_208B",
+  "name": "Sensor_208a_208b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6fff"
@@ -802,7 +802,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707d"
   },
-  "name": "Sensor_205_208B",
+  "name": "Sensor_205_208b",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7002"
@@ -818,7 +818,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707e"
   },
-  "name": "Sensor_207_208A",
+  "name": "Sensor_207_208a",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7000"
@@ -834,7 +834,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff707f"
   },
-  "name": "Sensor_205_208A",
+  "name": "Sensor_205_208a",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7002"
@@ -866,7 +866,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7081"
   },
-  "name": "Sensor_207_T2",
+  "name": "Sensor_207_RW1",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7000"
@@ -882,7 +882,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7082"
   },
-  "name": "Sensor_207_T3",
+  "name": "Sensor_207_RW1",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7000"
@@ -914,7 +914,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7084"
   },
-  "name": "Sensor_212_P1",
+  "name": "Sensor_212_200",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7009"
@@ -930,7 +930,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7085"
   },
-  "name": "Sensor_P1_P2",
+  "name": "Sensor_200-1_200-2",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7005"
@@ -946,7 +946,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7086"
   },
-  "name": "Sensor_P1_P3",
+  "name": "Sensor_200-1_200-3",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7005"
@@ -962,7 +962,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7087"
   },
-  "name": "Sensor_P2_P4",
+  "name": "Sensor_200-2_200-4",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7006"
@@ -978,7 +978,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7088"
   },
-  "name": "Sensor_P3_P4",
+  "name": "Sensor_200-3_200-4",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7007"
@@ -994,7 +994,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff7089"
   },
-  "name": "Sensor_229_P4",
+  "name": "Sensor_229_200",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7010"
@@ -1010,7 +1010,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff708a"
   },
-  "name": "Sensor_217A_P4",
+  "name": "Sensor_217a_200",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff700f"
@@ -1026,7 +1026,7 @@
   "_id": {
     "$oid": "67efbb220b23f5290bff708b"
   },
-  "name": "Sensor_216_P4",
+  "name": "Sensor_216_200",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff700d"
@@ -1106,7 +1106,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7090"
   },
-  "name": "Sensor_P1_T1",
+  "name": "Sensor_200_HALL",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff7005"
@@ -1122,7 +1122,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7091"
   },
-  "name": "Sensor_217A_218A",
+  "name": "Sensor_217a_218a",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff700f"
@@ -1138,7 +1138,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7092"
   },
-  "name": "Sensor_217A_229",
+  "name": "Sensor_217a_229",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff700f"
@@ -1154,7 +1154,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7093"
   },
-  "name": "Sensor_217A_217B",
+  "name": "Sensor_217a_217b",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff700f"
@@ -1202,7 +1202,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7096"
   },
-  "name": "Sensor_217F_227",
+  "name": "Sensor_217f_227",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7013"
@@ -1234,7 +1234,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7098"
   },
-  "name": "Sensor_217E_217F",
+  "name": "Sensor_217e_217f",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7014"
@@ -1250,7 +1250,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff7099"
   },
-  "name": "Sensor_217F_220",
+  "name": "Sensor_217f_220",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7013"
@@ -1266,7 +1266,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff709a"
   },
-  "name": "Sensor_217D_217E",
+  "name": "Sensor_217d_217e",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7015"
@@ -1282,7 +1282,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff709b"
   },
-  "name": "Sensor_217C_217D",
+  "name": "Sensor_217c_217d",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7016"
@@ -1298,7 +1298,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff709c"
   },
-  "name": "Sensor_217B_217C",
+  "name": "Sensor_217b_217c",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7017"
@@ -1314,7 +1314,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff709d"
   },
-  "name": "Sensor_218A_218B",
+  "name": "Sensor_218a_218b",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7018"
@@ -1330,7 +1330,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff709e"
   },
-  "name": "Sensor_218B_219",
+  "name": "Sensor_218b_219",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7019"
@@ -1506,7 +1506,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70a9"
   },
-  "name": "Sensor_218A_P5",
+  "name": "Sensor_218a_P5",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7018"
@@ -1554,7 +1554,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70ac"
   },
-  "name": "Sensor_270B_P8",
+  "name": "Sensor_270b_P8",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7027"
@@ -1570,7 +1570,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70ad"
   },
-  "name": "Sensor_270A_P8",
+  "name": "Sensor_270a_P8",
   "rooms": [
     {
       "$oid": "67efbb200b23f5290bff7028"
@@ -1698,7 +1698,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b5"
   },
-  "name": "Sensor_269A_P9",
+  "name": "Sensor_269a_P9",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff702e"
@@ -1714,7 +1714,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b6"
   },
-  "name": "Sensor_269B_P9",
+  "name": "Sensor_269b_P9",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff702f"
@@ -1730,7 +1730,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b7"
   },
-  "name": "Sensor_263B_P9",
+  "name": "Sensor_263b_P9",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7030"
@@ -1746,7 +1746,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b8"
   },
-  "name": "Sensor_263C_P9",
+  "name": "Sensor_263c_P9",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7031"
@@ -1778,7 +1778,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70ba"
   },
-  "name": "Sensor_263B_263C",
+  "name": "Sensor_263b_263c",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7030"
@@ -1794,7 +1794,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70bb"
   },
-  "name": "Sensor_263A_263C",
+  "name": "Sensor_263a_263c",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7032"
@@ -1826,7 +1826,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70bd"
   },
-  "name": "Sensor_211B_P6",
+  "name": "Sensor_211b_P6",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6ff9"
@@ -1842,7 +1842,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70be"
   },
-  "name": "Sensor_268A_P10",
+  "name": "Sensor_268a_P10",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7037"
@@ -1858,7 +1858,7 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70bf"
   },
-  "name": "Sensor_268B_P10",
+  "name": "Sensor_268b_P10",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7038"
@@ -1938,13 +1938,26 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70c4"
   },
-  "name": "Sensor_302_T5",
+  "name": "Sensor_302_P6",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7040"
     },
     {
-      "$oid": "67efbb210b23f5290bff7035"
+      "$oid": "67efbb210b23f5290bff7033",
+    }
+  ],
+  "latitude": 55.6889901500705,
+  "longitude": 12.578609583237638
+},
+{
+  "name": "Sensor_113_P6",
+  "rooms": [
+    {
+      "$oid": "67efbb210b23f5290bff7033",
+    },
+    {
+      "$oid": "67efbb1f0b23f5290bff6fee", 
     }
   ],
   "latitude": 55.6889901500705,
@@ -1954,7 +1967,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70c5"
   },
-  "name": "Sensor_302_T4",
+  "name": "Sensor_302_STUDYROOM",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7040"
@@ -1970,7 +1983,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70c6"
   },
-  "name": "Sensor_264_264A",
+  "name": "Sensor_264_264a",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7039"
@@ -2002,7 +2015,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70c8"
   },
-  "name": "Sensor_300_300A",
+  "name": "Sensor_300_300a",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703e"
@@ -2018,7 +2031,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70c9"
   },
-  "name": "Sensor_300_300B",
+  "name": "Sensor_300_300b",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703e"
@@ -2034,7 +2047,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70ca"
   },
-  "name": "Sensor_300_300C",
+  "name": "Sensor_300_300c",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703e"
@@ -2050,7 +2063,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70cb"
   },
-  "name": "Sensor_301_301A",
+  "name": "Sensor_301_301a",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703f"
@@ -2066,7 +2079,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70cc"
   },
-  "name": "Sensor_301_301B",
+  "name": "Sensor_301_301b",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703f"
@@ -2082,7 +2095,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70cd"
   },
-  "name": "Sensor_301_301C",
+  "name": "Sensor_301_301c",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703f"
@@ -2098,7 +2111,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70ce"
   },
-  "name": "Sensor_301_301D",
+  "name": "Sensor_301_301d",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703f"
@@ -2114,7 +2127,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70cf"
   },
-  "name": "Sensor_302_302A",
+  "name": "Sensor_302_302a",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7040"
@@ -2130,7 +2143,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70d0"
   },
-  "name": "Sensor_302_302B",
+  "name": "Sensor_302_302b",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7040"
@@ -2146,7 +2159,7 @@
   "_id": {
     "$oid": "67efbb240b23f5290bff70d1"
   },
-  "name": "Sensor_302_302C",
+  "name": "Sensor_302_302c",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff7040"
