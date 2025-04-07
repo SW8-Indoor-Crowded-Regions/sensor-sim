@@ -106,7 +106,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6fe4"
   },
-  "name": "101",
+  "name": "sal 101",
   "type": "EXHIBITION",
   "crowd_factor": 1.4212627757784635,
   "popularity_factor": 0.8365974055413034,
@@ -132,7 +132,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6fe6"
   },
-  "name": "109",
+  "name": "sal 109",
   "type": "EXHIBITION",
   "crowd_factor": 0.7802003348211105,
   "popularity_factor": 0.8907156168875547,
@@ -145,7 +145,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6fe7"
   },
-  "name": "108",
+  "name": "sal 108",
   "type": "EXHIBITION",
   "crowd_factor": 0.9907102874297101,
   "popularity_factor": 0.6740558344288134,
@@ -236,7 +236,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6fee"
   },
-  "name": "113",
+  "name": "sal 113 (skulpturgaden)",
   "type": "EXHIBITION",
   "crowd_factor": 1.2219514182614457,
   "popularity_factor": 1.1176919619223074,
@@ -275,7 +275,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff1"
   },
-  "name": "201A",
+  "name": "sal 201a",
   "type": "EXHIBITION",
   "crowd_factor": 0.8309398434093834,
   "popularity_factor": 0.37581090241975035,
@@ -288,7 +288,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff2"
   },
-  "name": "201B",
+  "name": "sal 201b",
   "type": "EXHIBITION",
   "crowd_factor": 1.1712830065881297,
   "popularity_factor": 1.151590500103611,
@@ -301,7 +301,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff3"
   },
-  "name": "201C",
+  "name": "sal 201c",
   "type": "EXHIBITION",
   "crowd_factor": 0.33515786491478483,
   "popularity_factor": 1.1932175973506394,
@@ -314,7 +314,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff4"
   },
-  "name": "201D",
+  "name": "sal 201d",
   "type": "EXHIBITION",
   "crowd_factor": 0.5536579124661428,
   "popularity_factor": 0.8870144373241061,
@@ -327,7 +327,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff5"
   },
-  "name": "201E",
+  "name": "sal 201e",
   "type": "EXHIBITION",
   "crowd_factor": 0.8151859310249362,
   "popularity_factor": 1.297787963598207,
@@ -340,7 +340,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff6"
   },
-  "name": "202",
+  "name": "sal 202",
   "type": "EXHIBITION",
   "crowd_factor": 1.503693774998164,
   "popularity_factor": 0.7905351808296566,
@@ -353,7 +353,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff7"
   },
-  "name": "203",
+  "name": "sal 203",
   "type": "EXHIBITION",
   "crowd_factor": 1.3269008232952766,
   "popularity_factor": 1.2666024544798358,
@@ -366,7 +366,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff8"
   },
-  "name": "204",
+  "name": "sal 204",
   "type": "EXHIBITION",
   "crowd_factor": 0.5389674170521738,
   "popularity_factor": 1.1632260086761652,
@@ -379,7 +379,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ff9"
   },
-  "name": "211B",
+  "name": "sal 211b",
   "type": "EXHIBITION",
   "crowd_factor": 0.9940569732462436,
   "popularity_factor": 1.4836902482775205,
@@ -392,7 +392,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ffa"
   },
-  "name": "211A",
+  "name": "sal 211a",
   "type": "EXHIBITION",
   "crowd_factor": 0.9723464383386553,
   "popularity_factor": 0.7968009902005347,
@@ -405,7 +405,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ffb"
   },
-  "name": "210B",
+  "name": "sal 210b",
   "type": "EXHIBITION",
   "crowd_factor": 1.28830376427328,
   "popularity_factor": 0.8584703361980401,
@@ -418,7 +418,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ffc"
   },
-  "name": "210A",
+  "name": "sal 210a",
   "type": "EXHIBITION",
   "crowd_factor": 1.5649921511188798,
   "popularity_factor": 1.470108134592688,
@@ -431,7 +431,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ffd"
   },
-  "name": "208B",
+  "name": "sal 208b",
   "type": "EXHIBITION",
   "crowd_factor": 1.120209324006503,
   "popularity_factor": 0.6842389866468809,
@@ -444,7 +444,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6ffe"
   },
-  "name": "209",
+  "name": "sal 209",
   "type": "EXHIBITION",
   "crowd_factor": 1.3427073401950314,
   "popularity_factor": 0.9578089095791279,
@@ -457,7 +457,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff6fff"
   },
-  "name": "208A",
+  "name": "sal 208a",
   "type": "EXHIBITION",
   "crowd_factor": 1.2737931931889648,
   "popularity_factor": 1.1299288933247722,
@@ -470,7 +470,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff7000"
   },
-  "name": "207",
+  "name": "sal 207",
   "type": "EXHIBITION",
   "crowd_factor": 1.1357691128997511,
   "popularity_factor": 1.0204503983318987,
@@ -483,7 +483,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff7001"
   },
-  "name": "206",
+  "name": "sal 206",
   "type": "EXHIBITION",
   "crowd_factor": 1.3818165007676932,
   "popularity_factor": 0.5130595780950208,
@@ -496,7 +496,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff7002"
   },
-  "name": "205",
+  "name": "sal 205",
   "type": "EXHIBITION",
   "crowd_factor": 1.2559831366640954,
   "popularity_factor": 0.5399395532398842,
@@ -587,7 +587,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff7009"
   },
-  "name": "212",
+  "name": "sal 212",
   "type": "EXHIBITION",
   "crowd_factor": 1.2779973394925839,
   "popularity_factor": 1.3776563303692488,
@@ -600,7 +600,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff700a"
   },
-  "name": "213",
+  "name": "sal 213",
   "type": "EXHIBITION",
   "crowd_factor": 0.5466380546209252,
   "popularity_factor": 0.7421818453350189,
@@ -613,7 +613,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff700b"
   },
-  "name": "214",
+  "name": "sal 214",
   "type": "EXHIBITION",
   "crowd_factor": 1.4918396766578848,
   "popularity_factor": 1.2042495124939692,
@@ -626,7 +626,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff700c"
   },
-  "name": "215",
+  "name": "sal 215",
   "type": "EXHIBITION",
   "crowd_factor": 1.0009643162403896,
   "popularity_factor": 0.5897162626101591,
@@ -639,7 +639,7 @@
   "_id": {
     "$oid": "67efbb1f0b23f5290bff700d"
   },
-  "name": "216",
+  "name": "sal 216",
   "type": "EXHIBITION",
   "crowd_factor": 0.5313879568604446,
   "popularity_factor": 1.2611914152967298,
@@ -665,7 +665,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff700f"
   },
-  "name": "217A",
+  "name": "sal 217a",
   "type": "EXHIBITION",
   "crowd_factor": 0.9590272060813207,
   "popularity_factor": 1.2801097395229273,
@@ -678,7 +678,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7010"
   },
-  "name": "229",
+  "name": "sal 229",
   "type": "EXHIBITION",
   "crowd_factor": 1.2029087544343264,
   "popularity_factor": 1.339375598189415,
@@ -691,7 +691,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7011"
   },
-  "name": "228",
+  "name": "sal 228",
   "type": "EXHIBITION",
   "crowd_factor": 0.8539933505544091,
   "popularity_factor": 0.7152845405630666,
@@ -704,7 +704,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7012"
   },
-  "name": "227",
+  "name": "sal 227",
   "type": "EXHIBITION",
   "crowd_factor": 1.2304059974074144,
   "popularity_factor": 0.7381729108523106,
@@ -717,7 +717,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7013"
   },
-  "name": "217F",
+  "name": "sal 217f",
   "type": "EXHIBITION",
   "crowd_factor": 1.0942157911023898,
   "popularity_factor": 0.9418205274153103,
@@ -730,7 +730,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7014"
   },
-  "name": "217E",
+  "name": "sal 217e",
   "type": "EXHIBITION",
   "crowd_factor": 0.9215875110519033,
   "popularity_factor": 1.2746449402258035,
@@ -743,7 +743,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7015"
   },
-  "name": "217D",
+  "name": "sal 217d",
   "type": "EXHIBITION",
   "crowd_factor": 0.7134511947956381,
   "popularity_factor": 0.7893149920762472,
@@ -756,7 +756,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7016"
   },
-  "name": "217C",
+  "name": "sal 217c",
   "type": "EXHIBITION",
   "crowd_factor": 0.7782696782142308,
   "popularity_factor": 0.8917226807565237,
@@ -769,7 +769,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7017"
   },
-  "name": "217B",
+  "name": "sal 217b",
   "type": "EXHIBITION",
   "crowd_factor": 0.9338717266690855,
   "popularity_factor": 1.0060325662462657,
@@ -782,7 +782,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7018"
   },
-  "name": "218A",
+  "name": "sal 218a",
   "type": "EXHIBITION",
   "crowd_factor": 0.4801682082358235,
   "popularity_factor": 1.2396713657371374,
@@ -795,7 +795,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7019"
   },
-  "name": "218B",
+  "name": "sal 218b",
   "type": "EXHIBITION",
   "crowd_factor": 0.7763803409759348,
   "popularity_factor": 0.8530883982847446,
@@ -808,7 +808,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff701a"
   },
-  "name": "219",
+  "name": "sal 219",
   "type": "EXHIBITION",
   "crowd_factor": 0.720278096863886,
   "popularity_factor": 1.1420369832908186,
@@ -821,7 +821,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff701b"
   },
-  "name": "220",
+  "name": "sal 220",
   "type": "EXHIBITION",
   "crowd_factor": 1.035125164844589,
   "popularity_factor": 1.2114402991610225,
@@ -847,7 +847,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff701d"
   },
-  "name": "222",
+  "name": "sal 222",
   "type": "EXHIBITION",
   "crowd_factor": 1.4881634584565164,
   "popularity_factor": 1.1436431371544633,
@@ -860,7 +860,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff701e"
   },
-  "name": "223",
+  "name": "sal 223",
   "type": "EXHIBITION",
   "crowd_factor": 1.1949063220994207,
   "popularity_factor": 0.7534377176531885,
@@ -873,7 +873,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff701f"
   },
-  "name": "224",
+  "name": "sal 224",
   "type": "EXHIBITION",
   "crowd_factor": 0.7670681648931486,
   "popularity_factor": 1.0115903898236396,
@@ -886,7 +886,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7020"
   },
-  "name": "225",
+  "name": "sal 225",
   "type": "EXHIBITION",
   "crowd_factor": 1.3384919826161639,
   "popularity_factor": 1.2161750621009118,
@@ -899,7 +899,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7021"
   },
-  "name": "221",
+  "name": "sal 221",
   "type": "EXHIBITION",
   "crowd_factor": 0.9760160993519392,
   "popularity_factor": 0.9203707925024313,
@@ -977,7 +977,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7027"
   },
-  "name": "270B",
+  "name": "sal 270b",
   "type": "EXHIBITION",
   "crowd_factor": 0.2,
   "popularity_factor": 0.6592161750164531,
@@ -990,7 +990,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7028"
   },
-  "name": "270A",
+  "name": "sal 270a",
   "type": "EXHIBITION",
   "crowd_factor": 0.7533615771393823,
   "popularity_factor": 1.0519549346240973,
@@ -1003,7 +1003,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff7029"
   },
-  "name": "262",
+  "name": "sal 262",
   "type": "EXHIBITION",
   "crowd_factor": 1.0980627012335544,
   "popularity_factor": 1.4212026193169498,
@@ -1016,7 +1016,7 @@
   "_id": {
     "$oid": "67efbb200b23f5290bff702a"
   },
-  "name": "261",
+  "name": "sal 261",
   "type": "EXHIBITION",
   "crowd_factor": 0.8902788041546745,
   "popularity_factor": 1.0135326119287198,
@@ -1029,7 +1029,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff702b"
   },
-  "name": "272",
+  "name": "sal 272",
   "type": "EXHIBITION",
   "crowd_factor": 1.588726245150576,
   "popularity_factor": 0.7289263637637792,
@@ -1042,7 +1042,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff702c"
   },
-  "name": "260",
+  "name": "sal 260",
   "type": "EXHIBITION",
   "crowd_factor": 1.2479541355235613,
   "popularity_factor": 1.453420723869761,
@@ -1068,7 +1068,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff702e"
   },
-  "name": "269A",
+  "name": "sal 269a",
   "type": "EXHIBITION",
   "crowd_factor": 0.34821651869766373,
   "popularity_factor": 1.2516534636004313,
@@ -1081,7 +1081,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff702f"
   },
-  "name": "269B",
+  "name": "sal 269b",
   "type": "EXHIBITION",
   "crowd_factor": 0.6895732149668887,
   "popularity_factor": 1.0193030335019588,
@@ -1094,7 +1094,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7030"
   },
-  "name": "263B",
+  "name": "sal 263b",
   "type": "EXHIBITION",
   "crowd_factor": 0.5820236019737142,
   "popularity_factor": 0.6051949536936233,
@@ -1107,7 +1107,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7031"
   },
-  "name": "263C",
+  "name": "sal 263c",
   "type": "EXHIBITION",
   "crowd_factor": 0.651073738812989,
   "popularity_factor": 0.8944827083754325,
@@ -1120,7 +1120,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7032"
   },
-  "name": "263A",
+  "name": "sal 263a",
   "type": "EXHIBITION",
   "crowd_factor": 0.8523212134670567,
   "popularity_factor": 0.9206247611048491,
@@ -1185,7 +1185,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7037"
   },
-  "name": "268A",
+  "name": "sal 268a",
   "type": "EXHIBITION",
   "crowd_factor": 1.0158681346612266,
   "popularity_factor": 0.6044102709448346,
@@ -1198,7 +1198,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7038"
   },
-  "name": "268B",
+  "name": "sal 268b",
   "type": "EXHIBITION",
   "crowd_factor": 0.9982638969205855,
   "popularity_factor": 0.6442063390143665,
@@ -1211,7 +1211,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7039"
   },
-  "name": "264",
+  "name": "sal 264",
   "type": "EXHIBITION",
   "crowd_factor": 1.062267200113162,
   "popularity_factor": 1.0744036566673563,
@@ -1250,7 +1250,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff703c"
   },
-  "name": "265",
+  "name": "sal 265",
   "type": "EXHIBITION",
   "crowd_factor": 1.0377643204641598,
   "popularity_factor": 1.033250136995561,
@@ -1263,7 +1263,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff703d"
   },
-  "name": "266",
+  "name": "sal 266",
   "type": "EXHIBITION",
   "crowd_factor": 0.6901073697353605,
   "popularity_factor": 1.4599329372256336,
@@ -1289,7 +1289,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff703f"
   },
-  "name": "301",
+  "name": "sal 301",
   "type": "EXHIBITION",
   "crowd_factor": 1.6738894319360436,
   "popularity_factor": 0.8410901319761238,
@@ -1315,7 +1315,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7041"
   },
-  "name": "300A",
+  "name": "sal 300a",
   "type": "EXHIBITION",
   "crowd_factor": 1.051616911191495,
   "popularity_factor": 0.9834040793847731,
@@ -1328,7 +1328,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7042"
   },
-  "name": "300B",
+  "name": "sal 300b",
   "type": "EXHIBITION",
   "crowd_factor": 1.5344363667657304,
   "popularity_factor": 1.0265163725338304,
@@ -1354,7 +1354,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7044"
   },
-  "name": "301A",
+  "name": "sal 301a",
   "type": "EXHIBITION",
   "crowd_factor": 1.0968995705649445,
   "popularity_factor": 1.4462811336288723,
@@ -1367,7 +1367,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7045"
   },
-  "name": "301B",
+  "name": "sal 301b",
   "type": "EXHIBITION",
   "crowd_factor": 1.326029826745957,
   "popularity_factor": 0.9604811351204591,
@@ -1380,7 +1380,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7046"
   },
-  "name": "301C",
+  "name": "sal 301c",
   "type": "EXHIBITION",
   "crowd_factor": 1.3277268932539292,
   "popularity_factor": 1.0873382745936877,
@@ -1393,7 +1393,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7047"
   },
-  "name": "301D",
+  "name": "sal 301d",
   "type": "EXHIBITION",
   "crowd_factor": 1.6912846801841455,
   "popularity_factor": 1.358621544418966,
@@ -1406,7 +1406,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7048"
   },
-  "name": "302A",
+  "name": "sal 302a",
   "type": "EXHIBITION",
   "crowd_factor": 0.9018141157183857,
   "popularity_factor": 0.3739959239253053,
@@ -1419,7 +1419,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff7049"
   },
-  "name": "302B",
+  "name": "sal 302b",
   "type": "EXHIBITION",
   "crowd_factor": 1.2951952551394494,
   "popularity_factor": 1.463072986193673,
@@ -1432,7 +1432,7 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff704a"
   },
-  "name": "302C",
+  "name": "sal 302c",
   "type": "EXHIBITION",
   "crowd_factor": 1.1469924246330334,
   "popularity_factor": 0.8421984339317442,
