@@ -1,21 +1,5 @@
 [{
   "_id": {
-    "$oid": "67efbb210b23f5290bff704b"
-  },
-  "name": "Sensor_RW1_207",
-  "rooms": [
-    {
-      "$oid": "67efbb1f0b23f5290bff6fdc"
-    },
-    {
-      "$oid": "67efbb1f0b23f5290bff7003"
-    }
-  ],
-  "latitude": 55.688712259492036,
-  "longitude": 12.579272941514384
-},
-{
-  "_id": {
     "$oid": "67efbb210b23f5290bff704c"
   },
   "name": "Sensor_RW1_207",
@@ -24,7 +8,7 @@
       "$oid": "67efbb1f0b23f5290bff6fdc"
     },
     {
-      "$oid": "67efbb1f0b23f5290bff7004"
+      "$oid": "67efbb1f0b23f5290bff7000"
     }
   ],
   "latitude": 55.68851201358618,
@@ -464,22 +448,6 @@
 },
 {
   "_id": {
-    "$oid": "67efbb220b23f5290bff7068"
-  },
-  "name": "Sensor_STUDYROOM_302",
-  "rooms": [
-    {
-      "$oid": "67efbb1f0b23f5290bff6ff0"
-    },
-    {
-      "$oid": "67efbb210b23f5290bff7036"
-    }
-  ],
-  "latitude": 55.68895052022894,
-  "longitude": 12.579130333065654
-},
-{
-  "_id": {
     "$oid": "67efbb220b23f5290bff7069"
   },
   "name": "Sensor_113_STUDYROOM",
@@ -864,22 +832,6 @@
 },
 {
   "_id": {
-    "$oid": "67efbb220b23f5290bff7081"
-  },
-  "name": "Sensor_207_RW1",
-  "rooms": [
-    {
-      "$oid": "67efbb1f0b23f5290bff7000"
-    },
-    {
-      "$oid": "67efbb1f0b23f5290bff7003"
-    }
-  ],
-  "latitude": 55.68867242517941,
-  "longitude": 12.579339928498825
-},
-{
-  "_id": {
     "$oid": "67efbb220b23f5290bff7082"
   },
   "name": "Sensor_207_RW1",
@@ -888,7 +840,7 @@
       "$oid": "67efbb1f0b23f5290bff7000"
     },
     {
-      "$oid": "67efbb1f0b23f5290bff7004"
+      "$oid": "67efbb1f0b23f5290bff6fdc"
     }
   ],
   "latitude": 55.688513104783524,
@@ -1618,13 +1570,13 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b1"
   },
-  "name": "Sensor_300_T7",
+  "name": "Sensor_300_P8",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703e"
     },
     {
-      "$oid": "67efbb200b23f5290bff7025"
+      "$oid": "67efbb200b23f5290bff7024"
     }
   ],
   "latitude": 55.6889543922024,
@@ -1634,13 +1586,13 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b2"
   },
-  "name": "Sensor_300_T6",
+  "name": "Sensor_300_P5",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff703e"
     },
     {
-      "$oid": "67efbb200b23f5290bff7026"
+      "$oid": "67efbb200b23f5290bff7023"
     }
   ],
   "latitude": 55.68899219337628,
@@ -1919,6 +1871,19 @@
   "longitude": 12.579210412838828
 },
 {
+  "name": "Sensor_302_P10",
+  "rooms": [
+    {
+      "$oid": "67efbb210b23f5290bff7040"
+    },
+    {
+      "$oid": "67efbb210b23f5290bff7034"
+    }
+  ],
+  "latitude": 55.68893254103456,
+  "longitude": 12.579210412838828
+},
+{
   "_id": {
     "$oid": "67efbb240b23f5290bff70c4"
   },
@@ -1957,7 +1922,7 @@
       "$oid": "67efbb210b23f5290bff7040"
     },
     {
-      "$oid": "67efbb210b23f5290bff7036"
+      "$oid": "67efbb1f0b23f5290bff6ff0"
     }
   ],
   "latitude": 55.6889758469272,

@@ -1092,19 +1092,6 @@
 },
 {
   "_id": {
-    "$oid": "67efbb210b23f5290bff7035"
-  },
-  "name": "T5",
-  "type": "EXHIBITION",
-  "crowd_factor": 1.1298696831339614,
-  "popularity_factor": 1.030750008679407,
-  "occupants": 0,
-  "area": 50,
-  "longitude": 0,
-  "latitude": 0
-},
-{
-  "_id": {
     "$oid": "67efbb210b23f5290bff7037"
   },
   "name": "sal 268a",
