@@ -2,44 +2,23 @@ import pytest
 from fastapi.testclient import TestClient
 from unittest.mock import patch, AsyncMock
 import bson
-from app.utils.data_models.sensors import SensorModel
 from app.main import app
 from fastapi import HTTPException
+from app.test.factories.sensor_factory import SensorFactory
 
 client = TestClient(app)
 
 
-@pytest.fixture
-def sample_sensor():
-	return SensorModel(
-		id=str(bson.ObjectId()), rooms=[str(bson.ObjectId())], latitude=12.34, longitude=56.78
-	)
-
-
 @pytest.mark.asyncio
 @patch('app.routes.sensors.get_all_sensors', new_callable=AsyncMock)
-async def test_fetch_sensors(mock_get_all_sensors, sample_sensor):
+async def test_fetch_sensors(mock_get_all_sensors):
 	"""Test GET /sensors"""
-	mock_get_all_sensors.return_value = [sample_sensor, sample_sensor]
+	exp_sensors = [SensorFactory().to_dict() for _ in range(5)]
+	mock_get_all_sensors.return_value = exp_sensors
 
 	response = client.get('/sensors/')
- 
-	expected_response = {
-		'sensors': [
-			{
-				'id': str(sample_sensor.id),
-				'rooms': sample_sensor.rooms,
-				'latitude': sample_sensor.latitude,
-				'longitude': sample_sensor.longitude,
-			},
-			{
-				'id': str(sample_sensor.id),
-				'rooms': sample_sensor.rooms,
-				'latitude': sample_sensor.latitude,
-				'longitude': sample_sensor.longitude,
-			},
-		]
-	}
+
+	expected_response = {'sensors': exp_sensors}
 
 	assert response.status_code == 200
 	assert response.json() == expected_response
@@ -68,18 +47,14 @@ def test_fetch_sensors_error(mock_get_all_sensors):
 
 
 @patch('app.routes.sensors.get_sensor_by_id')
-def test_fetch_sensor_by_id(mock_get_sensor_by_id, sample_sensor):
+def test_fetch_sensor_by_id(mock_get_sensor_by_id):
 	"""Test GET /sensors/{sensor_id}"""
-	mock_get_sensor_by_id.return_value = sample_sensor
+	exp_sensor = SensorFactory().to_dict()
+	mock_get_sensor_by_id.return_value = exp_sensor
 
-	response = client.get(f'/sensors/{sample_sensor.id}')
- 
-	expected_response = {
-		'id': str(sample_sensor.id),
-		'rooms': sample_sensor.rooms,
-		'latitude': sample_sensor.latitude,
-		'longitude': sample_sensor.longitude,
-	}
+	response = client.get(f'/sensors/{exp_sensor["id"]}')
+
+	expected_response = exp_sensor
 
 	assert response.status_code == 200
 	assert response.json() == expected_response
