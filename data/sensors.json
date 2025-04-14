@@ -1893,7 +1893,7 @@
       "$oid": "67efbb210b23f5290bff7040"
     },
     {
-      "$oid": "67efbb210b23f5290bff7033",
+      "$oid": "67efbb210b23f5290bff7033"
     }
   ],
   "latitude": 55.6889901500705,
@@ -1903,10 +1903,10 @@
   "name": "Sensor_113_P6",
   "rooms": [
     {
-      "$oid": "67efbb210b23f5290bff7033",
+      "$oid": "67efbb210b23f5290bff7033"
     },
     {
-      "$oid": "67efbb1f0b23f5290bff6fee", 
+      "$oid": "67efbb1f0b23f5290bff6fee" 
     }
   ],
   "latitude": 55.6889901500705,

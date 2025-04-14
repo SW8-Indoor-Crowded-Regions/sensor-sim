@@ -2,7 +2,6 @@ import pytest
 from fastapi.testclient import TestClient
 from unittest.mock import patch, AsyncMock
 import bson
-from app.utils.data_models.sensors import SensorModel
 from app.main import app
 from fastapi import HTTPException
 from app.test.factories.sensor_factory import SensorFactory
@@ -18,10 +17,8 @@ async def test_fetch_sensors(mock_get_all_sensors):
 	mock_get_all_sensors.return_value = exp_sensors
 
 	response = client.get('/sensors/')
- 
-	expected_response = {
-		'sensors': exp_sensors
-	}
+
+	expected_response = {'sensors': exp_sensors}
 
 	assert response.status_code == 200
 	assert response.json() == expected_response
@@ -56,7 +53,7 @@ def test_fetch_sensor_by_id(mock_get_sensor_by_id):
 	mock_get_sensor_by_id.return_value = exp_sensor
 
 	response = client.get(f'/sensors/{exp_sensor["id"]}')
- 
+
 	expected_response = exp_sensor
 
 	assert response.status_code == 200
