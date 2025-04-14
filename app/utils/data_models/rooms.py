@@ -12,6 +12,9 @@ class RoomModel(BaseModel):
 	area: float
 	longitude: float
 	latitude: float
+	floor: int
+	borders: List[List[float]]
+	sensors: List[str]
 
 
 class RoomListModel(BaseModel):
