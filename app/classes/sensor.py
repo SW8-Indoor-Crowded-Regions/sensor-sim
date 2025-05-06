@@ -10,6 +10,7 @@ class Sensor:
 		self.id: int = id
 		self.rooms: list[Room] = rooms
 		self.movements: list[int] = [0, 0]
+		self.is_vertical: bool = True
 
 	def pass_sensor(self, from_room: int) -> 'Room':
 		"""Checks if the from_room ID matches the first or second room in the rooms tuple.
