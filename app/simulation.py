@@ -8,8 +8,14 @@ def main():
 	# Run load_rooms function and store the result in the variable 'rooms'
 	rooms = load_rooms()
 	sensors = load_sensors(rooms)
+	config = MovementConfig(
+		alpha = 0.1
+		beta = 0.1
+		penalty_factor = 0.1
+		create_visitor_probability = 0.5
+	)
 
-	simulation = Simulation(rooms, sensors)
+	simulation = Simulation(rooms, sensors, config)
 	simulation.run()
 
 

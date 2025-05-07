@@ -2,7 +2,7 @@ import pytest
 from app.classes.visitor import Visitor
 from app.classes.sensor import Sensor
 from app.classes.room import Room
-from app.utils.heuristics import choose_next_move, should_create_visitor, get_weights
+from app.utils.heuristics import choose_next_move, should_create_visitor, get_weights, p_stay, normalize_weights, MovementConfig
 
 
 @pytest.fixture
@@ -29,6 +29,11 @@ def visitor(rooms):
 
 
 @pytest.fixture
+def config():
+	return MovementConfig(alpha=0.1, beta=0.1, penalty_factor=0.1, create_visitor_probability=0.5)
+
+
+@pytest.fixture
 def setup_rooms_and_visitor(sensors, rooms, visitor):
 	rooms[0].sensors = [sensors[0], sensors[1]]
 	rooms[1].sensors = [sensors[0], sensors[2]]
@@ -39,11 +44,11 @@ def setup_rooms_and_visitor(sensors, rooms, visitor):
 	return visitor
 
 
-def test_choose_next_move(setup_rooms_and_visitor):
+def test_choose_next_move(setup_rooms_and_visitor, config):
 	visitor = setup_rooms_and_visitor
 
 	# Run function multiple times to check randomness
-	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
 
 	# Ensure function only returns valid options
 	assert chosen_sensors.issubset(set(visitor.get_movement_options()).union({None}))
@@ -52,12 +57,12 @@ def test_choose_next_move(setup_rooms_and_visitor):
 	assert len(chosen_sensors) == len(visitor.get_movement_options() + [None])
 
 
-def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor):
+def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor, config):
 	visitor = setup_rooms_and_visitor
 
 	mocker.patch('random.random', return_value=0.9)
 
-	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
 
 	# Ensure the visitor moves to one of the available sensors
 	assert chosen_sensors.issubset(set(visitor.get_movement_options()))
@@ -66,48 +71,48 @@ def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor):
 	assert None not in chosen_sensors
 
 
-def test_choose_next_move_stay(mocker, setup_rooms_and_visitor):
+def test_choose_next_move_stay(mocker, setup_rooms_and_visitor, config):
 	visitor = setup_rooms_and_visitor
 
 	mocker.patch('random.random', return_value=0.05)
 
-	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
 
 	# Ensure the visitor stays in the same room each time
 	assert chosen_sensors.issubset({None})
 
 
-def test_choose_next_move_no_options(visitor):
+def test_choose_next_move_no_options(visitor, config):
 	# Create a mock visitor with no movement options
 	visitor.get_movement_options = lambda: []
 
 	# Expect an exception when no movement options are available
 	with pytest.raises(Exception, match='No movement options found for visitor:'):
-		choose_next_move(visitor)
+		choose_next_move(visitor, config)
 
 
-def test_get_weights(visitor, rooms):
+def test_get_weights(visitor, rooms, config):
 	# Mock the movement options to have two sensors
 	visitor.get_movement_options = lambda: [Sensor(1, []), Sensor(2, [rooms[0], rooms[2]])]
-	print(get_weights(visitor.get_movement_options(), visitor))
+	print(get_weights(visitor.get_movement_options(), visitor, config.penalty_factor))
 	# Ensure the function returns a list of floats
 	assert all(
 		isinstance(weight, (float, int))
-		for weight in get_weights(visitor.get_movement_options(), visitor)
+		for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)
 	)
 
 	# Ensure the function returns a list of the same length as the movement options
-	assert len(get_weights(visitor.get_movement_options(), visitor)) == len(
+	assert len(get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)) == len(
 		visitor.get_movement_options()
 	)
 
 	# Ensure the function returns a list of weights between 0 and 1
-	assert all(0 <= weight <= 1 for weight in get_weights(visitor.get_movement_options(), visitor))
+	assert all(0 <= weight <= 1 for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor))
 
 
-def test_should_create_visitor():
+def test_should_create_visitor(config):
 	# Run the function multiple times to check randomness
-	created_visitors = [should_create_visitor() for _ in range(100)]
+	created_visitors = [should_create_visitor(config) for _ in range(100)]
 
 	# Ensure the function returns a boolean
 	assert all(isinstance(visitor, bool) for visitor in created_visitors)
@@ -116,15 +121,26 @@ def test_should_create_visitor():
 	assert sum(created_visitors) / len(created_visitors) == pytest.approx(0.5, abs=0.2)
 
 
-def test_should_create_visitor_fixed(mocker):
+def test_should_create_visitor_fixed(mocker, config):
 	# Mock the random function to always return 0.1
 	mocker.patch('random.random', return_value=0.1)
 
 	# Expect the function to return True
-	assert should_create_visitor()
+	assert should_create_visitor(config)
 
 	# Mock the random function to always return 0.9
 	mocker.patch('random.random', return_value=0.9)
 
 	# Expect the function to return False
-	assert not should_create_visitor()
+	assert not should_create_visitor(config)
+
+
+def test_normalize_weights_zero_weights():
+    """Test normalize_weights when all weights are zero."""
+
+    # Edge case: all zero weights
+    zero_weights = [0.0, 0.0, 0.0]
+
+    # Expect an exception due to zero division
+    with pytest.raises(Exception, match='Sum of weights cannot be zero, as this leads to zero division'):
+        normalize_weights(zero_weights)
