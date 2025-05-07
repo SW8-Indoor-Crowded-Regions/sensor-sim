@@ -21,8 +21,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # Copy entrypoint script (again) in case it was overwritten by COPY .
-COPY start.sh /app/start.sh
-RUN chmod +x /app/start.sh
+COPY start.sh /start.sh
+RUN chmod +x /start.sh
 
 # Expose port
 EXPOSE 8002
