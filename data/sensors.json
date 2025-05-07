@@ -1702,13 +1702,13 @@
   "_id": {
     "$oid": "67efbb230b23f5290bff70b4"
   },
-  "name": "Sensor_260_272",
+  "name": "Sensor_260_261",
   "rooms": [
     {
       "$oid": "67efbb210b23f5290bff702c"
     },
     {
-      "$oid": "67efbb210b23f5290bff702b"
+      "$oid": "67efbb200b23f5290bff702a"
     }
   ],
   "latitude": 55.68900923026165,
