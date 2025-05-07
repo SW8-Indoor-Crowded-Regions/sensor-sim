@@ -2,7 +2,13 @@ import pytest
 from app.classes.visitor import Visitor
 from app.classes.sensor import Sensor
 from app.classes.room import Room
-from app.utils.heuristics import choose_next_move, should_create_visitor, get_weights, p_stay, normalize_weights, MovementConfig
+from app.utils.heuristics import (
+	choose_next_move,
+	should_create_visitor,
+	get_weights,
+	normalize_weights,
+	MovementConfig,
+)
 
 
 @pytest.fixture
@@ -107,7 +113,10 @@ def test_get_weights(visitor, rooms, config):
 	)
 
 	# Ensure the function returns a list of weights between 0 and 1
-	assert all(0 <= weight <= 1 for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor))
+	assert all(
+		0 <= weight <= 1
+		for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)
+	)
 
 
 def test_should_create_visitor(config):
@@ -136,11 +145,13 @@ def test_should_create_visitor_fixed(mocker, config):
 
 
 def test_normalize_weights_zero_weights():
-    """Test normalize_weights when all weights are zero."""
+	"""Test normalize_weights when all weights are zero."""
 
-    # Edge case: all zero weights
-    zero_weights = [0.0, 0.0, 0.0]
+	# Edge case: all zero weights
+	zero_weights = [0.0, 0.0, 0.0]
 
-    # Expect an exception due to zero division
-    with pytest.raises(Exception, match='Sum of weights cannot be zero, as this leads to zero division'):
-        normalize_weights(zero_weights)
+	# Expect an exception due to zero division
+	with pytest.raises(
+		Exception, match='Sum of weights cannot be zero, as this leads to zero division'
+	):
+		normalize_weights(zero_weights)
