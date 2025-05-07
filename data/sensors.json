@@ -19,13 +19,13 @@
   "_id": {
     "$oid": "67efbb210b23f5290bff704d"
   },
-  "name": "Sensor_KAFETERIA_RW1",
+  "name": "Sensor_KAFETERIA_ADD-KAFETERIA",
   "rooms": [
     {
       "$oid": "67efbb1f0b23f5290bff6fdd"
     },
     {
-      "$oid": "67efbb1f0b23f5290bff6fdc"
+      "$oid": "67efbb210b23f5290bff704d"
     }
   ],
   "latitude": 55.68850792692439,
@@ -2388,5 +2388,22 @@
   "latitude": 55.688673,
   "longitude": 12.578504,
   "is_vertical": false
+},
+{
+  "_id": {
+    "$oid": "67efbb240b23f5290bff70de"
+  },
+  "name": "Sensor_ADD_KAFETERIA_RW1",
+  "rooms": [
+    {
+      "$oid": "67efbb210b23f5290bff704d"
+    },
+    {
+      "$oid": "67efbb1f0b23f5290bff6fdc"
+    }
+  ],
+  "latitude": 55.68850792692439,
+  "longitude": 12.579131943590408,
+  "is_vertical": true
 }
 ]
