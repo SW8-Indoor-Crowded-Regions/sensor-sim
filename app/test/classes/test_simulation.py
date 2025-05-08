@@ -1,5 +1,6 @@
 import pytest
 import time
+from datetime import timedelta
 from app.classes.visitor import Visitor
 from app.classes.room import Room
 from app.classes.simulation import Simulation
@@ -92,3 +93,13 @@ def test_visitor_movement(monkeypatch, simulation, config):
 	simulation.run()
 
 	assert simulation.visitors[0].moved is True  # Ensure visitor moved
+
+
+def test_update_interval_timedelta():
+	seconds = timedelta(seconds=3600)
+	minutes = timedelta(minutes=60)
+	hours = timedelta(hours=1)
+
+	assert seconds.total_seconds() == 3600
+	assert minutes.total_seconds() == 3600
+	assert hours.total_seconds() == 3600
