@@ -2,7 +2,8 @@ import json
 
 margin = 0.000005
 
-room_data = json.load(open('data/rooms_copy.json'))
+with open('data/rooms_copy.json') as f:
+    room_data = json.load(f)
 border = [0, 0]
 border_count = 0
 
