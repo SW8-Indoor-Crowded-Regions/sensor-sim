@@ -1,20 +1,21 @@
 #!/bin/bash
 set -e
 
-# Populate the database with initial data (e2e)
+# Populate MongoDB (initial data)
+echo "📦 Populating MongoDB..."
 python -m populate
 
-# Wait for Kafka to be ready
-/wait-for-it.sh kafka:9092 --timeout=30 -- echo "Kafka is up"
-
-# Start the data processor in the background
+# Start data processor
+echo "📡 Starting data processor..."
 python -m app.data_processor &
 
-# Start the simulation in the background
+# Give it a moment to set up any consumers/producers
+sleep 2
+
+# Start simulation
+echo "📈 Starting simulation..."
 python -m app.simulation &
 
-# Start the API (in the foreground so Docker keeps the container running)
-uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload
-
-# Wait for background processes if needed
-wait
+# Start API in foreground
+echo "🚀 Starting API server..."
+exec uvicorn app.main:app --host 0.0.0.0 --port 8002 --reload

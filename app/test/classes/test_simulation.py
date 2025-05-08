@@ -1,8 +1,10 @@
 import pytest
 import time
+from datetime import timedelta
 from app.classes.visitor import Visitor
 from app.classes.room import Room
 from app.classes.simulation import Simulation
+from app.utils.heuristics import MovementConfig
 
 
 class StopSimulation(Exception):
@@ -29,29 +31,33 @@ def sensor():
 
 
 @pytest.fixture
-def simulation(room, sensor):
+def config():
+	"""MovementConfig fixture for mocking constants"""
+	return MovementConfig(alpha=0.1, beta=0.1, penalty_factor=0.1, create_visitor_probability=0.5)
+
+
+@pytest.fixture
+def simulation(room, sensor, config):
 	"""Fixture to initialize the simulation."""
-	return Simulation(rooms=[room], sensors=[sensor])
+	return Simulation(rooms=[room], sensors=[sensor], config=config)
 
 
-def test_simulation_runs(monkeypatch, simulation):
+def test_simulation_runs(monkeypatch, simulation, config):
 	"""Test that the simulation runs and adds a visitor correctly."""
 
 	# Patch time.sleep to avoid real delays
-	monkeypatch.setattr(time, 'sleep', lambda x: None)
+	monkeypatch.setattr(time, 'sleep', lambda _: None)
 
 	# Patch should_create_visitor to return True once, then False
 	visitor_creation = iter([True, False, False])
 	monkeypatch.setattr(
-		'app.classes.simulation.should_create_visitor', lambda: next(visitor_creation)
+		'app.classes.simulation.should_create_visitor', lambda cfg: next(visitor_creation)
 	)
-	monkeypatch.setattr('app.classes.visitor.Visitor.move', lambda x: None)
-	monkeypatch.setattr('app.classes.sensor.Sensor.send_data', lambda x: None)
+	monkeypatch.setattr('app.classes.visitor.Visitor.move', lambda self: None)
+	monkeypatch.setattr('app.classes.sensor.Sensor.send_data', lambda self: None)
 
 	# Add a counter to stop the infinite loop
-	max_iterations = 2
-
-	simulation.max_iterations = max_iterations
+	simulation.max_iterations = 2
 
 	# Run the simulation and expect it to stop after 2 iterations
 	simulation.run()
@@ -61,7 +67,7 @@ def test_simulation_runs(monkeypatch, simulation):
 	assert isinstance(simulation.visitors[0], Visitor)
 
 
-def test_visitor_movement(monkeypatch, simulation):
+def test_visitor_movement(monkeypatch, simulation, config):
 	"""Test that visitors move during simulation."""
 
 	class MockVisitor:
@@ -80,12 +86,20 @@ def test_visitor_movement(monkeypatch, simulation):
 	simulation.visitors.append(MockVisitor(1, [simulation.starting_room]))
 
 	monkeypatch.setattr(time, 'sleep', lambda x: None)
-	monkeypatch.setattr('app.classes.simulation.should_create_visitor', lambda: False)
+	monkeypatch.setattr('app.classes.simulation.should_create_visitor', lambda cfg: False)
 
 	# Add a counter to stop the infinite loop
-	max_iterations = 2
-	simulation.max_iterations = max_iterations
-
+	simulation.max_iterations = 2
 	simulation.run()
 
 	assert simulation.visitors[0].moved is True  # Ensure visitor moved
+
+
+def test_update_interval_timedelta():
+	seconds = timedelta(seconds=3600)
+	minutes = timedelta(minutes=60)
+	hours = timedelta(hours=1)
+
+	assert seconds.total_seconds() == 3600
+	assert minutes.total_seconds() == 3600
+	assert hours.total_seconds() == 3600
