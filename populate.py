@@ -33,8 +33,8 @@ def convert_oid_to_string(data):
 
 def create_rooms_and_sensors():
 	"""Creates Room documents for each labeled room in ROOM_ADJACENCY, and creates Sensor documents for each doorway/opening between rooms."""
-	sensors = [Sensor(**data) for data in convert_oid_to_string(load_json('data/sensors_copy.json'))]
-	room_data = convert_oid_to_string(load_json('data/rooms_copy.json'))
+	sensors = [Sensor(**data) for data in convert_oid_to_string(load_json('data/sensors.json'))]
+	room_data = convert_oid_to_string(load_json('data/rooms.json'))
 
 	rooms = []
 	for data in room_data:
