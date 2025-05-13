@@ -121,16 +121,13 @@ def test_update_interval_timedelta():
 def test_create_visitors_from_occupancy(simulation_with_occupancy):
     """Test that visitors are created based on room occupancy at initialization."""
     simulation = simulation_with_occupancy
-
-    # Run the initialization (init_visitors_from_rooms is called in the constructor)
     visitors = simulation.visitors
 
-    # Check the number of visitors created
     assert len(visitors) == 3, f"Expected 3 visitors but found {len(visitors)}"
-
-    # Check if each visitor is correctly associated with the starting room and the current room
+    # Check if each visitor is correctly associated with the starting room and the current roo
     for visitor in visitors:
         assert isinstance(visitor, Visitor)
+		# Ensure that 2 visitors were added based on room occupancy
         assert len(visitor.visited_rooms) == 2
-        assert visitor.visited_rooms[0].id == simulation.starting_room.id  # Starting room
-        assert visitor.visited_rooms[1].id == 1  # The room with occupancy
+        assert visitor.visited_rooms[0].id == simulation.starting_room.id 
+        assert visitor.visited_rooms[1].id == 1 
