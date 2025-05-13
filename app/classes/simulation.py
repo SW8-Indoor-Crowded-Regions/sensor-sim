@@ -18,10 +18,18 @@ class Simulation:
 		self.rooms: list['Room'] = rooms
 		self.sensors: list['Sensor'] = sensors
 		self.starting_room: 'Room' = rooms[0]
-		self.visitors: list['Visitor'] = []
 		self.config: MovementConfig = config
 		self.max_iterations: None | int = max_iterations
 		self.update_interval: timedelta = update_interval
+		self.visitors: list['Visitor'] = self.init_visitors_from_rooms()
+
+	def init_visitors_from_rooms(self) -> list['Visitor']:
+		"""Initialize visitors from rooms with exisiting occupants"""
+		visitors = []
+		for room in self.rooms:
+			for _ in range(room.occupancy):
+				visitors.append(Visitor(1, [self.starting_room, room], self.config))
+		return visitors
 
 	def run(self) -> None:
 		"""Runs the simulation."""
@@ -39,8 +47,8 @@ class Simulation:
 					visitor.move()
 				for sensor in self.sensors:
 					sensor.send_data()
-				if should_create_visitor(self.config.create_visitor_probability):
-					self.visitors.append(Visitor(1, [self.starting_room]))
+				if should_create_visitor(self.config):
+					self.visitors.append(Visitor(1, [self.starting_room], self.config))
 					entrance_sensor.pass_sensor(0)
 					entrance_sensor.send_data()
 

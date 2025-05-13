@@ -12,6 +12,12 @@ from app.utils.heuristics import (
 
 
 @pytest.fixture
+def config():
+    """Provides a default MovementConfig for testing."""
+    return MovementConfig(alpha=0.1, beta=0.1, penalty_factor=0.1, create_visitor_probability=0.5)
+
+
+@pytest.fixture
 def rooms():
 	return [
 		Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, []),
@@ -30,13 +36,8 @@ def sensors(rooms):
 
 
 @pytest.fixture
-def visitor(rooms):
-	return Visitor(1, [rooms[0], rooms[1]])
-
-
-@pytest.fixture
-def config():
-	return MovementConfig(alpha=0.1, beta=0.1, penalty_factor=0.1, create_visitor_probability=0.5)
+def visitor(rooms, config):
+	return Visitor(1, [rooms[0], rooms[1]], config)
 
 
 @pytest.fixture
@@ -50,11 +51,11 @@ def setup_rooms_and_visitor(sensors, rooms, visitor):
 	return visitor
 
 
-def test_choose_next_move(setup_rooms_and_visitor, config):
+def test_choose_next_move(setup_rooms_and_visitor):
 	visitor = setup_rooms_and_visitor
 
 	# Run function multiple times to check randomness
-	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
 
 	# Ensure function only returns valid options
 	assert chosen_sensors.issubset(set(visitor.get_movement_options()).union({None}))
@@ -63,12 +64,12 @@ def test_choose_next_move(setup_rooms_and_visitor, config):
 	assert len(chosen_sensors) == len(visitor.get_movement_options() + [None])
 
 
-def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor, config):
+def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor):
 	visitor = setup_rooms_and_visitor
 
 	mocker.patch('random.random', return_value=0.9)
 
-	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
 
 	# Ensure the visitor moves to one of the available sensors
 	assert chosen_sensors.issubset(set(visitor.get_movement_options()))
@@ -77,45 +78,45 @@ def test_choose_next_move_no_stay(mocker, setup_rooms_and_visitor, config):
 	assert None not in chosen_sensors
 
 
-def test_choose_next_move_stay(mocker, setup_rooms_and_visitor, config):
+def test_choose_next_move_stay(mocker, setup_rooms_and_visitor):
 	visitor = setup_rooms_and_visitor
 
 	mocker.patch('random.random', return_value=0.05)
 
-	chosen_sensors = {choose_next_move(visitor, config) for _ in range(100)}
+	chosen_sensors = {choose_next_move(visitor) for _ in range(100)}
 
 	# Ensure the visitor stays in the same room each time
 	assert chosen_sensors.issubset({None})
 
 
-def test_choose_next_move_no_options(visitor, config):
+def test_choose_next_move_no_options(visitor):
 	# Create a mock visitor with no movement options
 	visitor.get_movement_options = lambda: []
 
 	# Expect an exception when no movement options are available
 	with pytest.raises(Exception, match='No movement options found for visitor:'):
-		choose_next_move(visitor, config)
+		choose_next_move(visitor)
 
 
-def test_get_weights(visitor, rooms, config):
+def test_get_weights(visitor, rooms):
 	# Mock the movement options to have two sensors
 	visitor.get_movement_options = lambda: [Sensor(1, []), Sensor(2, [rooms[0], rooms[2]])]
-	print(get_weights(visitor.get_movement_options(), visitor, config.penalty_factor))
+	print(get_weights(visitor.get_movement_options(), visitor))
 	# Ensure the function returns a list of floats
 	assert all(
 		isinstance(weight, (float, int))
-		for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)
+		for weight in get_weights(visitor.get_movement_options(), visitor)
 	)
 
 	# Ensure the function returns a list of the same length as the movement options
-	assert len(get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)) == len(
+	assert len(get_weights(visitor.get_movement_options(), visitor)) == len(
 		visitor.get_movement_options()
 	)
 
 	# Ensure the function returns a list of weights between 0 and 1
 	assert all(
 		0 <= weight <= 1
-		for weight in get_weights(visitor.get_movement_options(), visitor, config.penalty_factor)
+		for weight in get_weights(visitor.get_movement_options(), visitor)
 	)
 
 

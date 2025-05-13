@@ -18,7 +18,6 @@ def room():
 	"""Fixture for creating a mock room."""
 	return Room({'id': 0, 'name': 'Room 1', 'type': 'TEST'}, 1.0, 1.2, 100.0, [])
 
-
 @pytest.fixture
 def sensor():
 	"""Fixture for creating a mock sensor."""
@@ -42,6 +41,19 @@ def simulation(room, sensor, config):
 	return Simulation(rooms=[room], sensors=[sensor], config=config)
 
 
+@pytest.fixture
+def room_with_occupancy():
+    """Fixture for creating a room with specified occupancy."""
+    room = Room({'id': 1, 'name': 'Gallery', 'type': 'Exhibition'}, 1.0, 1.0, 100.0, [])
+    room.occupancy = 3  # Set occupancy to 3
+    return room
+
+@pytest.fixture
+def simulation_with_occupancy(room_with_occupancy, sensor, config):
+    """Fixture to initialize the simulation with room occupancy."""
+    return Simulation(rooms=[room_with_occupancy], sensors=[sensor], config=config)
+
+
 def test_simulation_runs(monkeypatch, simulation, config):
 	"""Test that the simulation runs and adds a visitor correctly."""
 
@@ -62,7 +74,7 @@ def test_simulation_runs(monkeypatch, simulation, config):
 	# Run the simulation and expect it to stop after 2 iterations
 	simulation.run()
 
-	# Ensure that one visitor was added
+	# Ensure that 1 visitor was added by simulation
 	assert len(simulation.visitors) == 1
 	assert isinstance(simulation.visitors[0], Visitor)
 
@@ -71,10 +83,11 @@ def test_visitor_movement(monkeypatch, simulation, config):
 	"""Test that visitors move during simulation."""
 
 	class MockVisitor:
-		def __init__(self, id, rooms):
+		def __init__(self, id, rooms, config):
 			self.id = id
 			self.rooms = rooms
 			self.moved = False
+			self.config = config
 
 		def move(self):
 			self.moved = True  # Simulate movement
@@ -83,7 +96,7 @@ def test_visitor_movement(monkeypatch, simulation, config):
 	monkeypatch.setattr('app.classes.visitor.Visitor', MockVisitor)
 
 	# Add a visitor manually
-	simulation.visitors.append(MockVisitor(1, [simulation.starting_room]))
+	simulation.visitors.append(MockVisitor(1, [simulation.starting_room], config))
 
 	monkeypatch.setattr(time, 'sleep', lambda x: None)
 	monkeypatch.setattr('app.classes.simulation.should_create_visitor', lambda cfg: False)
@@ -103,3 +116,21 @@ def test_update_interval_timedelta():
 	assert seconds.total_seconds() == 3600
 	assert minutes.total_seconds() == 3600
 	assert hours.total_seconds() == 3600
+
+
+def test_create_visitors_from_occupancy(simulation_with_occupancy):
+    """Test that visitors are created based on room occupancy at initialization."""
+    simulation = simulation_with_occupancy
+
+    # Run the initialization (init_visitors_from_rooms is called in the constructor)
+    visitors = simulation.visitors
+
+    # Check the number of visitors created
+    assert len(visitors) == 3, f"Expected 3 visitors but found {len(visitors)}"
+
+    # Check if each visitor is correctly associated with the starting room and the current room
+    for visitor in visitors:
+        assert isinstance(visitor, Visitor)
+        assert len(visitor.visited_rooms) == 2
+        assert visitor.visited_rooms[0].id == simulation.starting_room.id  # Starting room
+        assert visitor.visited_rooms[1].id == 1  # The room with occupancy

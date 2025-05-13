@@ -1,5 +1,5 @@
 from typing import TYPE_CHECKING
-from app.utils.heuristics import choose_next_move
+from app.utils.heuristics import choose_next_move, MovementConfig
 
 if TYPE_CHECKING:
 	from app.classes.room import Room
@@ -7,9 +7,10 @@ if TYPE_CHECKING:
 
 
 class Visitor:
-	def __init__(self, id: int, rooms: list['Room']):
+	def __init__(self, id: int, rooms: list['Room'], config: MovementConfig):
 		self.id: int = id
 		self.visited_rooms: list[Room] = rooms
+		self.config: MovementConfig = config
 		
 	
 	def get_current_room(self) -> 'Room':
