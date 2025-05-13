@@ -28,7 +28,16 @@ class Simulation:
 		visitors = []
 		for room in self.rooms:
 			for _ in range(room.occupancy):
-				visitors.append(Visitor(1, [self.starting_room, room], self.config))
+				previous_room = None
+				for sensor in self.sensors:
+					if room in sensor.rooms:
+						previous_room = next(r for r in sensor.rooms if r != room)
+						break
+
+				if previous_room:
+					visitors.append(Visitor(1, [self.starting_room, previous_room, room], self.config))
+				else:
+					visitors.append(Visitor(1, [self.starting_room, room], self.config))
 		return visitors
 
 	def run(self) -> None:
