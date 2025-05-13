@@ -29,17 +29,26 @@ def test_room_initialization(room, room_info, sensors):
 
 
 def test_add_occupants(room):
-	room.add_occupants(1)
-	assert room.occupancy == 1
+	room.add_occupants(5)
+	assert room.occupancy == 5
+ 
+def test_add_occupants_zero(room):
+	room.add_occupants(0)
+	assert room.occupancy == 0
+ 
+def test_add_occupants_negative(room):
+	room.add_occupants(-3)
+	assert room.occupancy == 0
 
 
 def test_remove_occupants(room):
-	room.add_occupants(3)
+	room.occupancy = 3
 	room.remove_occupants(2)
 	assert room.occupancy == 1
 
 
 def test_remove_occupants_below_zero(room):
+	assert room.occupancy == 0
 	room.remove_occupants(1)
 	assert room.occupancy == 0
 
