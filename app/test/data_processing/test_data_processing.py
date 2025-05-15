@@ -12,9 +12,9 @@ from app.data_processing.data_processing import SensorDataType
 @pytest.fixture
 def rooms():
 	"""Creates a set of Room objects for testing."""
-	room1 = Room({'id': '1', 'name': 'Room 1', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
-	room2 = Room({'id': '2', 'name': 'Room 2', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
-	room3 = Room({'id': '3', 'name': 'Room 3', 'type': 'TEST'}, 1.0, 1.0, 100.0, [])
+	room1 = Room({'id': '1', 'name': 'Room 1', 'type': 'TEST'}, 0, 1.0, 1.0, 100.0, [])
+	room2 = Room({'id': '2', 'name': 'Room 2', 'type': 'TEST'}, 0, 1.0, 1.0, 100.0, [])
+	room3 = Room({'id': '3', 'name': 'Room 3', 'type': 'TEST'}, 0, 1.0, 1.0, 100.0, [])
 	return [room1, room2, room3]
 
 

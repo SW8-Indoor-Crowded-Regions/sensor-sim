@@ -23,7 +23,7 @@ def sensors():
 
 @pytest.fixture
 def room(room_info, sensors):
-	return Room(room_info, crowd_factor=1.5, popularity_factor=1.2, area=50.0, sensors=sensors)
+	return Room(room_info, 0, crowd_factor=1.5, popularity_factor=1.2, area=50.0, sensors=sensors)
 
 
 @pytest.fixture
@@ -31,9 +31,9 @@ def visitor():
 	sensor1 = Sensor(1, [])
 	sensor2 = Sensor(2, [])
 	sensor3 = Sensor(3, [])
-	room1 = Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, [sensor1, sensor2])
-	room2 = Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 1.2, 1.2, 111.2, [sensor1, sensor3])
-	room3 = Room({'id': 3, 'name': '103', 'type': 'meeting'}, 1.3, 1.2, 121.2, [sensor2, sensor3])
+	room1 = Room({'id': 1, 'name': '101', 'type': 'lounge'}, 0, 1.5, 1.2, 101.2, [sensor1, sensor2])
+	room2 = Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 0, 1.2, 1.2, 111.2, [sensor1, sensor3])
+	room3 = Room({'id': 3, 'name': '103', 'type': 'meeting'}, 0, 1.3, 1.2, 121.2, [sensor2, sensor3])
 	sensor1.rooms = [room1, room2]
 	sensor2.rooms = [room1, room3]
 	sensor3.rooms = [room2, room3]
@@ -67,7 +67,7 @@ def test_move(monkeypatch, visitor):
 
 
 def test_move_no_sensor(monkeypatch, visitor):
-	visitor.visited_rooms = [Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, [])]
+	visitor.visited_rooms = [Room({'id': 1, 'name': '101', 'type': 'lounge'}, 0, 1.5, 1.2, 101.2, [])]
 
 	def mock_choose_next_move(visitor):
 		return None

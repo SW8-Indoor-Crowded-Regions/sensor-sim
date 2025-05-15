@@ -20,9 +20,9 @@ def config():
 @pytest.fixture
 def rooms():
 	return [
-		Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, []),
-		Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 1.2, 1.2, 111.2, []),
-		Room({'id': 3, 'name': '103', 'type': 'meeting'}, 1.3, 1.2, 121.2, []),
+		Room({'id': 1, 'name': '101', 'type': 'lounge'}, 0, 1.5, 1.2, 101.2, []),
+		Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 0, 1.2, 1.2, 111.2, []),
+		Room({'id': 3, 'name': '103', 'type': 'meeting'}, 0, 1.3, 1.2, 121.2, []),
 	]
 
 

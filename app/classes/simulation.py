@@ -45,7 +45,7 @@ class Simulation:
 		entrance_sensor = Sensor(
 			0,
 			[
-				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 1.0, 0, []),
+				Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 0, 1.0, 1.0, 0, []),
 				self.starting_room,
 			],
 		)

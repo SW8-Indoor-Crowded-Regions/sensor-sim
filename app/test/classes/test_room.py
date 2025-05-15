@@ -15,7 +15,7 @@ def sensors():
 
 @pytest.fixture
 def room(room_info, sensors):
-	return Room(room_info, crowd_factor=1.5, popularity_factor=1.2, area=50.0, sensors=sensors)
+	return Room(room_info, occupancy=0, crowd_factor=1.5, popularity_factor=1.2, area=50.0, sensors=sensors)
 
 
 def test_room_initialization(room, room_info, sensors):

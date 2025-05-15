@@ -16,7 +16,7 @@ def load_rooms() -> list[Room]:
 			'name': room['name'],
 			'type': room['type'],
 		}
-		rooms.append(Room(room_info, room['crowd_factor'], room['popularity_factor'], room['area'], []))
+		rooms.append(Room(room_info, int(room['occupants']), room['crowd_factor'], room['popularity_factor'], room['area'], []))
 	return rooms
 
 
