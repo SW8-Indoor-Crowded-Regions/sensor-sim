@@ -1,6 +1,12 @@
 import pytest
-from app.utils.heuristics import p_stay
+from app.utils.heuristics import p_stay, MovementConfig
 from app.test.factories.visitor_factory import VisitorFactory
+
+
+@pytest.fixture
+def config():
+    """Provides a default MovementConfig for testing."""
+    return MovementConfig(alpha=0.5, beta=0.5, penalty_factor=0.5, create_visitor_probability=0.5)
 
 
 # Skulpturgaden is the largest area with 2915.98 square meters
@@ -19,22 +25,22 @@ from app.test.factories.visitor_factory import VisitorFactory
 )
 
 
-def test_p_stay_normalization_bounds(popularity, area, alpha, beta):
+def test_p_stay_normalization_bounds(popularity, area, alpha, beta, config):
     """Test that p_stay() returns values within 0-1 regardless of input."""
-    visitor = VisitorFactory(popularity_factor=popularity, area=area).create()
-    stay_prob = p_stay(visitor, alpha=alpha, beta=beta)
+    visitor = VisitorFactory(popularity_factor=popularity, area=area, config=config).create()
+    stay_prob = p_stay(visitor)
     assert 0.0 <= stay_prob <= 1.0, f"Stay probability {stay_prob} is out of bounds for input: {popularity}, {area}"
 
 
-def test_p_stay_comparison():
+def test_p_stay_comparison(config):
     """Test that a small, low-popularity room gets a lower stay probability than a large, high-popularity room."""
     # Small, low-popularity room
-    visitor_small_low = VisitorFactory(popularity_factor=0.2, area=18).create()
-    stay_prob_small_low = p_stay(visitor_small_low, alpha=0.5, beta=0.5)
+    visitor_small_low = VisitorFactory(popularity_factor=0.2, area=18, config=config).create()
+    stay_prob_small_low = p_stay(visitor_small_low)
 
     # Large, high-popularity room
-    visitor_large_high = VisitorFactory(popularity_factor=2.0, area=2915.98).create()
-    stay_prob_large_high = p_stay(visitor_large_high, alpha=0.5, beta=0.5)
+    visitor_large_high = VisitorFactory(popularity_factor=2.0, area=2915.98, config=config).create()
+    stay_prob_large_high = p_stay(visitor_large_high)
 
     assert stay_prob_small_low < stay_prob_large_high, (
         f"Expected smaller stay probability for small/low room. Got {stay_prob_small_low} vs {stay_prob_large_high}"

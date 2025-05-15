@@ -23,7 +23,7 @@ def main():
 	#   - timedelta(minutes=x)
 	#   - timedelta(hours=x)
 	# Replace x with the amount you prefer
-	simulation = Simulation(rooms, sensors, config, timedelta(seconds=10))
+	simulation = Simulation(rooms=rooms, sensors=sensors, config=config, max_iterations=None, update_interval=timedelta(seconds=10))
 	simulation.run()
 
 

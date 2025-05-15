@@ -15,7 +15,7 @@ class MovementConfig:
     create_visitor_probability: float = 0.1
         
 
-def choose_next_move(visitor: 'Visitor', config: MovementConfig) -> 'Sensor | None':
+def choose_next_move(visitor: 'Visitor') -> 'Sensor | None':
 	"""Chooses the next move for the visitor.
 	Returns:
 		Sensor: The sensor that the visitor will move through.
@@ -25,11 +25,11 @@ def choose_next_move(visitor: 'Visitor', config: MovementConfig) -> 'Sensor | No
 		raise Exception(f'No movement options found for visitor: {visitor}')
 
 	# Chance to stay in the same room
-	stay_probability = p_stay(visitor, config.alpha, config.beta)
+	stay_probability = p_stay(visitor)
 	if random.random() < stay_probability:
 		return None
 
-	weights = get_weights(movement_options, visitor, config.penalty_factor)
+	weights = get_weights(movement_options, visitor)
 	normalized_weights = normalize_weights(weights)
 
 	# Choose a random sensor to move to. Chance should be lower for sensor leeding to previous room
@@ -37,8 +37,7 @@ def choose_next_move(visitor: 'Visitor', config: MovementConfig) -> 'Sensor | No
 
 
 def get_weights(
-	movement_options: list['Sensor'], visitor: 'Visitor', penalty_factor: float
-) -> list[float]:
+	movement_options: list['Sensor'], visitor: 'Visitor') -> list[float]:
 	"""Returns the weights for each movement option.
 	Args:
 		movement_options (list[Sensor]): The movement options for the visitor.
@@ -53,7 +52,7 @@ def get_weights(
 	for sensor in movement_options:
 		if previous_room_id and any(room.id == previous_room_id for room in sensor.rooms):
 			popularity_factor = visitor.get_current_room().popularity_factor
-			weights.append(popularity_factor * penalty_factor)
+			weights.append(popularity_factor * visitor.config.penalty_factor)
 		else:
 			weights.append(1)
 	return weights
@@ -68,7 +67,7 @@ def should_create_visitor(config: MovementConfig) -> bool:
 	return random.random() < config.create_visitor_probability
 
 
-def p_stay(visitor: 'Visitor', alpha: float, beta: float) -> float:
+def p_stay(visitor: 'Visitor') -> float:
 	"""Calculates the stay_probability"""
 
 	# Fixed bounds for normalization
@@ -81,7 +80,7 @@ def p_stay(visitor: 'Visitor', alpha: float, beta: float) -> float:
 	normalized_popularity = popularity / MAX_POPULARTIY
 	normalized_area = area / MAX_AREA  
 
-	stay_probability = (alpha * normalized_popularity) + (beta * normalized_area)
+	stay_probability = (visitor.config.alpha * normalized_popularity) + (visitor.config.beta * normalized_area)
 	return max(0.0, min(stay_probability, 1.0))
 
 
