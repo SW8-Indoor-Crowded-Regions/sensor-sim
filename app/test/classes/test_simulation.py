@@ -17,7 +17,7 @@ class StopSimulation(Exception):
 @pytest.fixture
 def room():
 	"""Fixture for creating a mock room."""
-	return Room({'id': 0, 'name': 'Room 1', 'type': 'TEST'}, 1.0, 1.2, 100.0, [])
+	return Room({'id': 0, 'name': 'Room 1', 'type': 'TEST'}, occupancy=0, crowd_factor=1.0, popularity_factor=1.2, area=100.0, sensors=[])
 
 
 @pytest.fixture
@@ -51,7 +51,7 @@ def simulation(room, sensor, config):
 @pytest.fixture
 def room_with_occupancy():
 	"""Fixture for creating a room with specified occupancy."""
-	room = Room({'id': 1, 'name': 'Gallery', 'type': 'Exhibition'}, 1.0, 1.0, 100.0, [])
+	room = Room({'id': 1, 'name': 'Gallery', 'type': 'Exhibition'}, 0, 1.0, 1.0, 100.0, [])
 	room.occupancy = 3  # Set occupancy to 3
 	return room
 
@@ -142,9 +142,9 @@ def test_create_visitors_from_occupancy(simulation_with_occupancy):
 
 def test_create_visitors_with_previous_room():
 	"""Test that visitors are created with a previous room if a sensor connects to it."""
-	starting_room = Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 1.0, 1.0, 0, [])
-	previous_room = Room({'id': 1, 'name': 'Gallery', 'type': 'Exhibition'}, 1.0, 1.0, 100.0, [])
-	current_room = Room({'id': 2, 'name': 'Room 2', 'type': 'TEST'}, 1.0, 1.2, 100.0, [])
+	starting_room = Room({'id': 0, 'name': 'Entrance', 'type': 'ENTRANCE'}, 0, 1.0, 1.0, 0, [])
+	previous_room = Room({'id': 1, 'name': 'Gallery', 'type': 'Exhibition'}, 0, 1.0, 1.0, 100.0, [])
+	current_room = Room({'id': 2, 'name': 'Room 2', 'type': 'TEST'}, 0, 1.0, 1.2, 100.0, [])
 	current_room.occupancy = 2
 
 	# Define a sensor that connects previous_room and current_room

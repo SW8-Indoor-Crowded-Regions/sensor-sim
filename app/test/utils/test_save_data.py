@@ -11,7 +11,7 @@ def mock_db(mocker):
     return mock_collection
 
 def test_save_data_single_room(mock_db, capsys):
-    test_room = Room({"id": "room1", "name": "Single", "type": "Lab"}, 1.0, 1.2, 50.0, [])
+    test_room = Room({"id": "room1", "name": "Single", "type": "Lab"}, 0, 1.0, 1.2, 50.0, [])
     test_room.occupancy = 5
     save_data([test_room])
     mock_db.bulk_write.assert_called_once()
@@ -28,7 +28,7 @@ def test_save_data_multiple_rooms(mock_db, capsys):
     rooms = []
     for i in range(3):
         room_info = {"id": f"room{i}", "name": "Multi", "type": "Lab"}
-        r = Room(room_info, 1.0 + i, 1.2, 100.0, [])
+        r = Room(room_info, 0, 1.0 + i, 1.2, 100.0, [])
         r.occupancy = i
         rooms.append(r)
     save_data(rooms)

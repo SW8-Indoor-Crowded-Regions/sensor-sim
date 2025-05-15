@@ -8,8 +8,8 @@ from app.utils.load_objects import load_rooms, load_sensors
 def mock_rooms(mocker):
 	"""Mock database RoomModel.objects() call."""
 	mock_room_data = [
-		{'_id': 1, 'name': 'Room 1', 'type': 'office', 'crowd_factor': 1.5, 'popularity_factor': 1.2, 'area': 50.0},
-		{'_id': 2, 'name': 'Room 2', 'type': 'conference', 'crowd_factor': 2.0, 'popularity_factor': 1.2, 'area': 100.0},
+		{'_id': 1, 'name': 'Room 1', 'type': 'office', 'crowd_factor': 1.5, 'popularity_factor': 1.2, 'area': 50.0, 'occupants': 0},
+		{'_id': 2, 'name': 'Room 2', 'type': 'conference', 'crowd_factor': 2.0, 'popularity_factor': 1.2, 'area': 100.0, 'occupants': 0},
 	]
 
 	mock_model = mocker.patch(
