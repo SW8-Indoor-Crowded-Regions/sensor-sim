@@ -29,6 +29,8 @@ class Room:
 		Args:
 		occupants (int): The number of occupants to add to the room's occupancy.
 		"""
+		if occupants <= 0:
+			return
 		self.occupancy += occupants
 
 	def remove_occupants(self, occupants: int) -> None:

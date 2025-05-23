@@ -2,6 +2,13 @@ import pytest
 from app.classes.room import Room
 from app.classes.sensor import Sensor
 from app.classes.visitor import Visitor
+from app.utils.heuristics import MovementConfig
+
+
+@pytest.fixture
+def config():
+    """Provides a default MovementConfig for testing."""
+    return MovementConfig(alpha=0.5, beta=0.5, penalty_factor=0.5, create_visitor_probability=0.5)
 
 
 @pytest.fixture
@@ -30,7 +37,7 @@ def visitor():
 	sensor1.rooms = [room1, room2]
 	sensor2.rooms = [room1, room3]
 	sensor3.rooms = [room2, room3]
-	return Visitor(1, [room1, room2])
+	return Visitor(1, [room1, room2], config)
 
 
 def test_get_movement_options(visitor):
