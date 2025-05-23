@@ -10,6 +10,7 @@ class Room:
 	def __init__(
 		self,
 		room_info: dict,
+		occupancy: int,
 		crowd_factor: float,
 		popularity_factor: float,
 		area: float,
@@ -18,7 +19,7 @@ class Room:
 		self.id: int = room_info['id']
 		self.name: str = room_info['name']
 		self.type: str = room_info['type']
-		self.occupancy: int = 0
+		self.occupancy: int = occupancy
 		self.crowd_factor: float = crowd_factor
 		self.popularity_factor: float = popularity_factor
 		self.area: float = area

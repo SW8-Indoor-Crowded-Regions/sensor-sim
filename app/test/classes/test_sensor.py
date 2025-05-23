@@ -5,8 +5,8 @@ from app.classes.room import Room
 
 @pytest.fixture
 def sensor():
-	room1 = Room({'id': 1, 'name': '101', 'type': 'lounge'}, 1.5, 1.2, 101.2, [])
-	room2 = Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 1.2, 1.2, 111.2, [])
+	room1 = Room({'id': 1, 'name': '101', 'type': 'lounge'}, 0, 1.5, 1.2, 101.2, [])
+	room2 = Room({'id': 2, 'name': '102', 'type': 'exhibition'}, 0, 1.2, 1.2, 111.2, [])
 	return Sensor(1, [room1, room2])
 
 
